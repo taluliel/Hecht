@@ -6,7 +6,7 @@
  
       v-model="select"
       :items="items"
-      :search-input.sync="search"
+      v-on:change="goToRoom"
       cache-items
       class="mx-8 white--text"
       flat
@@ -28,7 +28,13 @@ export default{
     data:()=> ({
         items:[2000,3000,4000,5000],
         select:null
-    })
+    }),
+    methods:{
+      goToRoom: function (){
+        this.$router.push(`/room/${this.select}`)
+      
+      }
+    }
 
 }
 </script>
