@@ -31,7 +31,8 @@ export default{
     }),
     methods:{
       goToRoom: function (){
-        this.$router.push(`/room/${this.select}`)
+        this.$router.push(`/room/${this.select}`).catch(err=>{err})
+
       
       }
     }
