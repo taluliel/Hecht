@@ -1,19 +1,21 @@
 <template>
     <div class="canvas-wrapper">
-        <v-img :src="getImage"></v-img>
+        {{room}}
+        <v-img :src="getImage" class="featureImage"></v-img>
+       <div class="rect"/>
     </div>
 </template>
 <script>
 export default {
     name:'featureViewer',
-    props:{imageDetails: Object},
-    data:()=>{
-        return {image:'https://picsum.photos/id/11/100/60'}
+    props:{imageDetails: Object,room:String},
+    data(){
+        return {image1: this.imageDetails.src}
     },
     methods:{
         init(){
             console.log("we are in init");
-            console.log(this.imageDetails.src)
+            console.log(this.image1)
         }
     },
     computed:{
@@ -27,5 +29,14 @@ export default {
 }
 </script>
 <style scoped>
-
+.featureImage{
+    clip-path: url(#clip);
+}
+.rect{
+    left:0;
+    top:0;
+    width:100px;
+    height: 100px;
+    border:1px solid black;
+}
 </style>
