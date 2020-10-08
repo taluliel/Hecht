@@ -17,10 +17,10 @@ export default{
         items:[2000,3000,4000,5000],
         currentRoom:null,
         rooms:{
-            2000:{src:logo,coords:{x:0,y:0,length:100}},
-            3000:{src:logo,coords:{x:100,y:50,length:200}},
-            4000:{src:bronze,coords:{x:100,y:50,length:300}},
-            5000:{src:bronze,coords:{x:100,y:50,length:400}}
+            2000:{src:logo,features:[{coords:{x:0,y:0,length:100},featureID:1}]},
+            3000:{src:logo,features:[{coords:{x:100,y:50,length:200},featureID:2}]},
+            4000:{src:bronze,features:[{coords:{x:100,y:50,length:300},featureID:3}]},
+            5000:{src:bronze,features:[{coords:{x:100,y:50,length:400},featureID:4},{coords:{x:300,y:200,length:250},featureID:5}]}
         }
     }),
     // watch:{

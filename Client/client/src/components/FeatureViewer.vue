@@ -1,8 +1,11 @@
 <template>
     <div class="canvas-wrapper">
-        {{room}}
-        <v-img :src="getImage" class="featureImage"></v-img>
-       <div class="rect"/>
+        <v-img contain :src="imageDetails.src" class="featureImage">
+            <div  v-for="(item,index) in imageDetails.features" :key="index" 
+            v-on:click="goToQuestionCategories(item.featureID)"
+            class="rect" :style="{top:item.coords.y+'px',left:item.coords.x+'px',height:item.coords.length+'px',width:item.coords.length+'px'}"/>
+        </v-img>
+        
     </div>
 </template>
 <script>
@@ -16,14 +19,21 @@ export default {
         init(){
             console.log("we are in init");
             console.log(this.image1)
+        },
+        goToQuestionCategories(featureID){
+             this.$router.push(`/feature/${featureID}`).catch(err=>{err})
         }
     },
     computed:{
         getImage: function(){
             return this.imageDetails.src;
+        },
+        getCoords: function(){
+            return this.imageDetails.coords;
         }
     },
     updated(){
+        console.log("niinninini");
         this.init();
     }
 }
@@ -33,10 +43,7 @@ export default {
     clip-path: url(#clip);
 }
 .rect{
-    left:0;
-    top:0;
-    width:100px;
-    height: 100px;
-    border:1px solid black;
+   position: relative;
+    border:2px solid red;
 }
 </style>
