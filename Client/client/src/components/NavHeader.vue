@@ -1,7 +1,7 @@
 <template>
     <v-app-bar
       app
-      color="primary"
+      color="white"
     >
       <div class="d-flex align-center">
         <v-img
@@ -29,7 +29,6 @@ export default{
     name:'NavHeader',
     components:{
         RoomQuery
-
     }
 }
 

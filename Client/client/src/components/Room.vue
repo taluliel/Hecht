@@ -1,8 +1,9 @@
 <template>
 <div class="room">
-i am in my room {{currentRoom}}
+I am in room {{currentRoom}}
 <feature-viewer :image-details="rooms[currentRoom]" :room="currentRoom"></feature-viewer>
 </div>
+
 </template>
 
 <script>
@@ -10,6 +11,7 @@ import bronze from '../assets/HQ_BronzeTools.jpg';
 import logo from '../assets/logo.jpeg';
 
 import FeatureViewer from './FeatureViewer';
+
 export default{
     name:'room',
     components:{FeatureViewer},
@@ -23,11 +25,7 @@ export default{
             5000:{src:bronze,features:[{coords:{x:100,y:50,length:400},featureID:4},{coords:{x:300,y:200,length:250},featureID:5}]}
         }
     }),
-    // watch:{
-    //     '$route.params.id': function (id){
-    //        this.currentRoom = id;
-    //     }
-    // },
+  
     beforeRouteUpdate(to,from,next){
         this.currentRoom = to.params.id;
         next();

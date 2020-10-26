@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import VueCoreVideoPlayer from 'vue-core-video-player'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import Room from './components/Room';
 import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
+
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.use(VueCoreVideoPlayer)
 const routes = [{path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer},

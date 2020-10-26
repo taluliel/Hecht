@@ -32,10 +32,7 @@ export default {
             return this.imageDetails.coords;
         }
     },
-    updated(){
-        console.log("niinninini");
-        this.init();
-    }
+
 }
 </script>
 <style scoped>

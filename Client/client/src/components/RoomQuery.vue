@@ -1,7 +1,7 @@
 <template>
 <div class="roomQuery">
- <v-toolbar  color="primary" flat >
- <v-toolbar-title>Choose room</v-toolbar-title>
+ <v-toolbar  color="White" flat >
+ <!-- <v-toolbar-title>Choose room</v-toolbar-title> -->
   <v-autocomplete
  
       v-model="select"
@@ -12,7 +12,7 @@
       flat
       hide-no-data
       hide-details
-      label="Which room are you ?"
+      label="Please insert room code"
     ></v-autocomplete>
     <v-btn icon>
       <v-icon>mdi-dots-vertical</v-icon>

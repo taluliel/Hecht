@@ -1,7 +1,8 @@
 <template>
 <div class="movieViewer">
-
-  <video width="450" controls  :src="movies[selectedMovie]"></video>
+  
+     <vue-core-video-player width="450" src="./vidoe2.mp4"></vue-core-video-player>
+  <!-- <video width="450" controls  :src="movies[selectedMovie]"></video> -->
 </div>
 </template>
 
@@ -12,7 +13,7 @@ export default{
     name:'movieViewer',
     data:()=> ({
       movies:{
-          1:'https://www.w3schools.com/tags/movie.mp4'
+          1:'./vidoe2.mp4'
       },
       selectedMovie:null
     }),
