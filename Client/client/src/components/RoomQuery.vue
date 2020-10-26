@@ -12,6 +12,8 @@
       flat
       hide-no-data
       hide-details
+      item-text="roomCode"
+    item-value="roomCode"
       label="Please insert room code"
     ></v-autocomplete>
     <v-btn icon>
@@ -23,12 +25,23 @@
 </template>
 
 <script>
+import {db} from '../main';
 export default{
     name:'roomQuery',
     data:()=> ({
-        items:[2000,3000,4000,5000],
+        // items:[2000,3000,4000,5000],
+        items:[],
         select:null
     }),
+    firestore(){
+    return {
+      items: db.collection('rooms').where('roomCode',"!=",null)
+    }
+  },
+  mounted(){
+
+    
+  },
     methods:{
       goToRoom: function (){
         this.$router.push(`/room/${this.select}`).catch(err=>{err})

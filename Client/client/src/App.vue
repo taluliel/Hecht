@@ -3,7 +3,7 @@
   <NavHeader></NavHeader>
     <v-main>
         <router-view></router-view>
-    </v-main>
+       </v-main>
   </v-app>
 </template>
 

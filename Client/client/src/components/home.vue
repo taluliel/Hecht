@@ -1,6 +1,5 @@
 <template>
 <div class="home">
-I am in room 
 
 </div>
 </template>
