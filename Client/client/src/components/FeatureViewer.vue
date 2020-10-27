@@ -20,9 +20,12 @@ export default {
              this.$router.push(`/feature/${featureID}`).catch(err=>{err})
         }
     },
+    updated(){
+console.log(this.imageDetails);
+    },
     computed:{
         getImage: function(){
-            return this.imageDetails.src;
+            return this.imageDetails.name;
         },
         getCoords: function(){
             return this.imageDetails.coords;
