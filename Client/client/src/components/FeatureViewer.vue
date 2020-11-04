@@ -1,27 +1,31 @@
 <template>
     <div class="canvas-wrapper">
-        <v-img contain :src="imageDetails.name" class="featureImage">
+        <v-img contain :src="image1" class="featureImage">
             <div  v-for="(item,index) in imageDetails.features" :key="index" 
-            v-on:click="goToQuestionCategories(item.featureID)"
+            v-on:click="goToQuestionCategories(item.featureid)"
             class="flex-rectangle" :style="{top:item.coords.y+'px',left:item.coords.x+'px',height:item.coords.length+'px',width:item.coords.length+'px'}"/>
         </v-img>
 
     </div>
 </template>
 <script>
+import { storage } from "../main";
 export default {
     name:'featureViewer',
     props:{imageDetails: Object,room:String},
     data(){
-        return {image1: this.imageDetails.src}
+        return {image1: ""}
     },
     methods:{
             goToQuestionCategories(featureID){
              this.$router.push(`/feature/${featureID}`).catch(err=>{err})
         }
     },
-    updated(){
-console.log(this.imageDetails);
+    async updated(){
+        if(this.imageDetails.name){
+         this.image1 = await storage.ref(`/images/${this.imageDetails.name}.jpg`).getDownloadURL();
+        }
+        console.log(this.imageDetails);
     },
     computed:{
         getImage: function(){
