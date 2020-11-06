@@ -20,10 +20,14 @@ export default {
     currentRoomCode: null,
     currentRoom: null,
   }),
-  beforeRouteUpdate(to, from, next) {
-    this.currentRoomCode = to.params.id;
-    db.collection("rooms")
-      .where("roomCode", "==", +this.currentRoomCode)
+  mounted(){
+      this.getFeatures(this.$route.params.id);
+  },
+  methods:{
+      getFeatures(roomCode){
+          this.currentRoomCode=roomCode;
+              db.collection("rooms")
+      .where("roomCode", "==", +roomCode)
       .get()
       .then((querySnapshot) => {
         const room = querySnapshot.docs[0].data();
@@ -31,9 +35,13 @@ export default {
         console.log(room);
         // do something with documents
       });
+      }
+  },
+  beforeRouteEnter(to, from, next) {
+       next(vm =>{
+           vm.getFeatures(to.params.id);
+   })}
 
-    next();
-  }
 };
 </script>
 

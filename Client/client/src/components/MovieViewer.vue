@@ -1,31 +1,50 @@
 <template>
-<div class="movieViewer">
-  
-     <vue-core-video-player width="450" src="./vidoe2.mp4"></vue-core-video-player>
-  <!-- <video width="450" controls  :src="movies[selectedMovie]"></video> -->
-</div>
+  <div class="movieViewer">
+    <!-- <vue-core-video-player width="450" src="./vidoe2.mp4"></vue-core-video-player> -->
+    <video-player class="video-player-box"
+                 ref="videoPlayer"
+                 :options="playerOptions"
+                 :playsinline="true" 
+                 ></video-player>
+  </div>
 </template>
 
 <script>
 // import video1 from '../assets/video1.mp4';
+// require styles
+import 'video.js/dist/video-js.css'
 
+import { videoPlayer } from 'vue-video-player'
+import { storage } from "../main";
 export default{
     name:'movieViewer',
+    components:{
+      videoPlayer
+    },
     data:()=> ({
-      movies:{
-          1:'./vidoe2.mp4'
-      },
-      selectedMovie:null
+      selectedMovie:"",
+        playerOptions: {
+          // videojs options
+          muted: false,
+          language: 'en',
+          sources: [{
+            type: "video/mp4",
+            src: ""
+          }]
+        }
     }),
-    mounted(){
-        this.selectedMovie = this.$route.params.id;
-        console.log(this.$route.params.id)
+    beforeRouteEnter(to, from, next) {
+   next(vm =>{
+     vm.getMovie(to.params.id)
+   })},
+     mounted(){
+        this.getMovie(this.$route.params.id);
     },
     methods:{   
-      goToRoom: function (){
-        this.$router.push(`/room/${this.select}`).catch(err=>{err})
-
-      }
+     async getMovie(movieName){
+      this.selectedMovie = await storage.ref(`/videos/${movieName}.mp4`).getDownloadURL();
+      this.playerOptions.sources[0].src=this.selectedMovie;
+     }
     }
 
 }
@@ -34,7 +53,7 @@ export default{
 <style scoped>
 video {
   /* override other styles to make responsive */
-  width: 100%    !important;
-  height: auto   !important;
+  width: 100% !important;
+  height: auto !important;
 }
 </style>

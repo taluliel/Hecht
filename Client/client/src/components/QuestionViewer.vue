@@ -1,7 +1,7 @@
 <template>
   <div class="questionCategories">
     <ol>
-      <li v-for="(item, index) in questions" :key="index">
+      <li v-for="(item, index) in questions" :key="index" v-on:click="goToMovie(item.movieName)">
         {{ item.questionText }}
       </li>
     </ol>
@@ -27,8 +27,8 @@ export default {
   
   },
   methods: {
-    goToRoom: function () {
-      this.$router.push(`/room/${this.select}`).catch((err) => {
+    goToMovie: function (movieName) {
+      this.$router.push(`/movie/${movieName}`).catch((err) => {
         err;
       });
     },

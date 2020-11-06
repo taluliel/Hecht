@@ -19,11 +19,14 @@ export default {
     methods:{
             goToQuestionCategories(featureID){
              this.$router.push(`/feature/${featureID}`).catch(err=>{err})
+        },
+        async getImageUrl(imageName){
+            this.image1 = await storage.ref(`/images/${imageName}.jpg`).getDownloadURL();
         }
     },
-    async updated(){
+     updated(){
         if(this.imageDetails.name){
-         this.image1 = await storage.ref(`/images/${this.imageDetails.name}.jpg`).getDownloadURL();
+          this.getImageUrl(this.imageDetails.name);
         }
         console.log(this.imageDetails);
     },
