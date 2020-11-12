@@ -18,17 +18,48 @@
         <RoomQuery></RoomQuery>
         </div>
       <v-spacer></v-spacer>
+      <v-menu
+        left
+        bottom
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
 
+        <v-list>
+          <v-list-item>
+            <v-list-item-title v-on:click="choose('he')">עברית&nbsp;<flag iso="il" /> </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>English&nbsp;<flag iso="us" /> </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>عربيه&nbsp;<flag iso="sa" /> </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
     
 </template>
 
 <script>
+
 import RoomQuery from './RoomQuery'
 export default{
     name:'NavHeader',
     components:{
         RoomQuery
+    },
+    methods:{
+      choose(lang){
+        this.$vuetify.lang.current = lang;
+      }
     }
 }
 

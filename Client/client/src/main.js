@@ -14,6 +14,10 @@ import vuetify from './plugins/vuetify';
 import Room from './components/Room';
 import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
+import FlagIcon from 'vue-flag-icon';
+
+
+Vue.use(FlagIcon);
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)

@@ -14,11 +14,9 @@
       hide-details
       item-text="roomCode"
     item-value="roomCode"
-      label="Please insert room code"
+      v-bind:label="nav_label"
     ></v-autocomplete>
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
-    </v-btn>
+    
   </v-toolbar>
 
 </div>
@@ -33,6 +31,11 @@ export default{
         items:[],
         select:null
     }),
+    computed:{
+      nav_label:function(){
+        return this.$t('roomquery.label')
+      }
+    },
     firestore(){
     return {
       items: db.collection('rooms').where('roomCode',"!=",null)
