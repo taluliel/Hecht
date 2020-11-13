@@ -33,7 +33,7 @@ export default{
     }),
     computed:{
       nav_label:function(){
-        return this.$t('roomquery.label')
+        return 'Please choose a room code';
       }
     },
     firestore(){

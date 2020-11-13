@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import VueCoreVideoPlayer from 'vue-core-video-player'
+//import VueCoreVideoPlayer from 'vue-core-video-player'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 //import VueFire from 'vuefire';
@@ -21,7 +21,7 @@ Vue.use(FlagIcon);
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
-Vue.use(VueCoreVideoPlayer)
+//Vue.use(VueCoreVideoPlayer)
 
 Vue.use(firestorePlugin)
 firebase.initializeApp({
