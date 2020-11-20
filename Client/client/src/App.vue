@@ -1,7 +1,7 @@
 <template>
 <v-app>
   <NavHeader></NavHeader>
-    <v-main>
+    <v-main class="main">
         <router-view></router-view>
        </v-main>
   </v-app>
@@ -21,3 +21,8 @@ export default {
   }),
 };
 </script>
+<style scoped>
+.main{
+  background:rgb(255, 229, 196);
+}
+</style>

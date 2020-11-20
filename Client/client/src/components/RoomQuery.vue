@@ -1,6 +1,6 @@
 <template>
 <div class="roomQuery">
- <v-toolbar  color="White" flat >
+ <v-toolbar flat >
  <!-- <v-toolbar-title>Choose room</v-toolbar-title> -->
   <v-autocomplete
  
@@ -18,8 +18,8 @@
     ></v-autocomplete>
     
   </v-toolbar>
-
 </div>
+
 </template>
 
 <script>
@@ -27,7 +27,6 @@ import {db} from '../main';
 export default{
     name:'roomQuery',
     data:()=> ({
-        // items:[2000,3000,4000,5000],
         items:[],
         select:null
     }),
@@ -47,6 +46,7 @@ export default{
   },
     methods:{
       goToRoom: function (){
+        console.log(this.select);
         this.$router.push(`/room/${this.select}`).catch(err=>{err})
 
       
@@ -59,5 +59,5 @@ export default{
 <style scoped>
 .roomQuery{
     width:100%;
-}
+  }
 </style>

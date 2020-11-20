@@ -4,6 +4,7 @@
       color="white"
     >
       <div class="d-flex align-center">
+        <a href="/">
         <v-img
           alt="Hecht Logo"
           class="shrink mr-2"
@@ -12,6 +13,7 @@
           transition="scale-transition"
           width="40"
         />
+        </a>
       </div>
 
         <div class="roomQuery-container">
@@ -30,6 +32,14 @@
           >
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
+          <div>
+            <v-btn
+            icon
+            v-on:click="back()"
+        >
+            <v-icon>mdi-arrow-left</v-icon>
+            </v-btn>
+          </div>
         </template>
 
         <v-list>
@@ -40,7 +50,7 @@
             <v-list-item-title>English&nbsp;<flag iso="us" /> </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>عربيه&nbsp;<flag iso="sa" /> </v-list-item-title>
+            <v-list-item-title>عربيه&nbsp;<flag iso="eg" /> </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -49,8 +59,8 @@
 </template>
 
 <script>
-
 import RoomQuery from './RoomQuery'
+
 export default{
     name:'NavHeader',
     components:{
@@ -59,6 +69,9 @@ export default{
     methods:{
       choose(lang){
         this.$vuetify.lang.current = lang;
+      },
+      back(){
+        this.$router.back();
       }
     }
 }
@@ -67,7 +80,10 @@ export default{
 
 <style scoped>
 .roomQuery-container{
-    width:100%;
-    
+    width:100%;  
 }
+.align-center img {
+    cursor: pointer;
+  }
+
 </style>

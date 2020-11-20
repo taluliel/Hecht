@@ -25,6 +25,7 @@ export default {
   },
   methods:{
       getFeatures(roomCode){
+        console.log(roomCode);
           this.currentRoomCode=roomCode;
               db.collection("rooms")
       .where("roomCode", "==", +roomCode)
@@ -32,15 +33,17 @@ export default {
       .then((querySnapshot) => {
         const room = querySnapshot.docs[0].data();
         this.currentRoom = room;
-        console.log(room);
-        // do something with documents
+      
       });
       }
   },
-  beforeRouteEnter(to, from, next) {
-       next(vm =>{
-           vm.getFeatures(to.params.id);
-   })}
+ 
+  beforeRouteUpdate(to, from, next) {
+    let roomCode = to.params.id;
+    this.getFeatures(roomCode);
+    next();
+  
+   }
 
 };
 </script>
@@ -48,5 +51,6 @@ export default {
 <style scoped>
 .room {
   width: 100%;
+  
 }
 </style>

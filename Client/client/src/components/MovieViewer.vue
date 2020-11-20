@@ -5,7 +5,7 @@
                  ref="videoPlayer"
                  :options="playerOptions"
                  :playsinline="true" 
-                 ></video-player>
+                ></video-player>
   </div>
 </template>
 
@@ -50,10 +50,23 @@ export default{
 }
 </script>
 
-<style scoped>
+<style>
+.movieViewer{
+  height:100%;
+  width:100%;
+}
+.video-js{
+    width: 100% !important;
+    height: 100% !important;
+}
+.video-player.video-player-box{
+   height:100%;
+  width:100%;
+}
 video {
   /* override other styles to make responsive */
   width: 100% !important;
-  height: auto !important;
+  height:100%;
 }
+
 </style>

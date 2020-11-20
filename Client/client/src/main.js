@@ -14,6 +14,7 @@ import vuetify from './plugins/vuetify';
 import Room from './components/Room';
 import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
+import Home from './components/Home';
 import FlagIcon from 'vue-flag-icon';
 
 
@@ -33,13 +34,15 @@ export const db = firebase.firestore();
 export const storage = firebase.storage();
 
 
-const routes = [{path:'/room/:id',name:'room',component:Room},
+const routes = [
+  {path:'/',name:'HOME',component:Home},
+  {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer},
 ];
 const router = new VueRouter({
+  routes, // short for `routes: routes`
   mode:'history',
-  routes // short for `routes: routes`
 })
 
 new Vue({

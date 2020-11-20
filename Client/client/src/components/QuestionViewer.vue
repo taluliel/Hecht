@@ -1,5 +1,5 @@
 <template>
-  <div class="questionCategories">
+  <div class="questions">
     <ol>
       <li v-for="(item, index) in questions" :key="index" v-on:click="goToMovie(item.movieName)">
         {{ item.questionText }}
@@ -11,7 +11,7 @@
 <script>
 import { db } from "../main";
 export default {
-  name: "questionCategories",
+  name: "questions",
   data: () => ({
     featureID: 1,
     questions: []
@@ -54,4 +54,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
