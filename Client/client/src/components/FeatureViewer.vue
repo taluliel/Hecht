@@ -65,7 +65,7 @@ export default {
 }
 .flex-rectangle {
 
-  border: 3px solid red;
+  border: 3px solid rgb(233, 143, 41);
   position:absolute;
 }
 /* .flex-rectangle:before{

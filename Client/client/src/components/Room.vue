@@ -27,7 +27,7 @@ export default {
       getFeatures(roomCode){
         console.log(roomCode);
           this.currentRoomCode=roomCode;
-              db.collection("rooms")
+              db.collection("Rooms")
       .where("roomCode", "==", +roomCode)
       .get()
       .then((querySnapshot) => {

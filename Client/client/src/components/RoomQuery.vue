@@ -37,7 +37,7 @@ export default{
     },
     firestore(){
     return {
-      items: db.collection('rooms').where('roomCode',"!=",null)
+      items: db.collection('Rooms').where('roomCode',"!=",null)
     }
   },
   mounted(){
