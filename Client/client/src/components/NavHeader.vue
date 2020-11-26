@@ -47,10 +47,10 @@
             <v-list-item-title v-on:click="choose('he')">עברית&nbsp;<flag iso="il" /> </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>English&nbsp;<flag iso="us" /> </v-list-item-title>
+            <v-list-item-title  v-on:click="choose('en')">English&nbsp;<flag iso="us" /> </v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>عربيه&nbsp;<flag iso="eg" /> </v-list-item-title>
+            <v-list-item-title v-on:click="choose('ar')">عربيه&nbsp;<flag iso="eg" /> </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -68,7 +68,7 @@ export default{
     },
     methods:{
       choose(lang){
-        this.$vuetify.lang.current = lang;
+        this.$i18n.locale=lang;
       },
       back(){
         this.$router.back();

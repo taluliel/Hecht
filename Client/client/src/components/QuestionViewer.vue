@@ -41,7 +41,7 @@ export default {
         //const room = querySnapshot.docs[0].data();
         querySnapshot.docs.map((questionRaw)=>{
           let questionItem = questionRaw.data();
-          this.questions.push(questionItem.question['EN'])
+          this.questions.push(questionItem.question[this.$i18n.locale.toUpperCase()])
           
         })
        

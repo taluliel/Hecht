@@ -1,7 +1,7 @@
 <template>
 <div class="home"> 
-  <h1  style="font-family: Arial, Helvetica, sans-serif">Hecht Museum</h1>
-  <button type="button" class="start">Start Tour</button>
+  <h1  style="font-family: Arial, Helvetica, sans-serif">{{ $t('museum_name') }}</h1>
+  <button type="button" class="start">{{ $t('start_tour') }}</button>
   <input type="hidden" id="custId" name="custId" value="3487">
 <!-- <v-toolbar  color="White" flat >
   <v-toolbar-title>Choose room</v-toolbar-title> -->

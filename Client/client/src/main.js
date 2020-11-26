@@ -16,7 +16,7 @@ import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
 import Home from './components/Home';
 import FlagIcon from 'vue-flag-icon';
-
+import i18n from './i18n'
 
 Vue.use(FlagIcon);
 
@@ -38,7 +38,7 @@ const routes = [
   {path:'/',name:'HOME',component:Home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
-{path:'/movie/:id',name:'movie',component:MovieViewer},
+{path:'/movie/:id',name:'movie',component:MovieViewer}
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`
@@ -48,5 +48,6 @@ const router = new VueRouter({
 new Vue({
   router,
   vuetify,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

@@ -14,7 +14,7 @@
       hide-details
       item-text="roomCode"
     item-value="roomCode"
-      v-bind:label="nav_label"
+      :label="nav_label"
     ></v-autocomplete>
     
   </v-toolbar>
@@ -32,7 +32,7 @@ export default{
     }),
     computed:{
       nav_label:function(){
-        return 'Please choose a room code';
+        return this.$t('choose_room');
       }
     },
     firestore(){
