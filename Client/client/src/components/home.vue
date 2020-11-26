@@ -27,7 +27,7 @@
 <script>
 import {db} from '../main';
 export default {
-    name:'home',
+    name:'Home',
      data:()=> ({
         items:[],
         select:null
