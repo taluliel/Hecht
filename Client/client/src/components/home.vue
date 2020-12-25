@@ -1,33 +1,17 @@
 <template>
 <div class="home"> 
-  <h1  style="font-family: Arial, Helvetica, sans-serif">{{ $t('museum_name') }}</h1>
-  <button type="button" class="start">{{ $t('start_tour') }}</button>
-  <input type="hidden" id="custId" name="custId" value="3487">
-<!-- <v-toolbar  color="White" flat >
-  <v-toolbar-title>Choose room</v-toolbar-title> -->
-  <!-- <v-autocomplete
- 
-      v-model="select"
-      :items="items"
-      v-on:change="goToRoom"
-      cache-items
-      class="mx-8 white--text"
-      flat
-      hide-no-data
-      hide-details
-      item-text="roomCode"
-    item-value="roomCode"
-      v-bind:label="nav_label"
-    ></v-autocomplete>
-    
-  </v-toolbar> --> 
-</div>
+  <h2>{{ $t('museum_name') }}</h2>
+  <!-- <button type="button" class="start">{{ $t('start_tour') }}</button> -->
+     <p id="startTour" class="font-weight-medium" style="background-color: #ee9c3f;">
+       {{ $t('start_tour') }}
+    </p>
+  </div>
 </template>
 
 <script>
 import {db} from '../main';
 export default {
-    name:'Home',
+    name:'home',
      data:()=> ({
         items:[],
         select:null
@@ -39,7 +23,7 @@ export default {
     },
     firestore(){
     return {
-      items: db.collection('rooms').where('roomCode',"!=",null)
+      items: db.collection('Rooms').where('roomCode',"!=",null)
     }
   },
   mounted(){
@@ -63,10 +47,11 @@ export default {
 .home{
   height:100%;
   width:100%;
-  padding: 70px;  
+  padding: 60px;
+  text-align: center;
   background-image: url("../assets/EntranceReubenHecht.jpg");
-  background-size: 100% 75%;
-  background-position-y: bottom;
+  background-size: 100% 65%;
+  background-position-y:250px;
   animation: anim1 ease-in-out 20s infinite;
   }
 
@@ -87,10 +72,15 @@ export default {
 
     }
   }
-  .start {
-    background-color: #69c26c;
+  /* .start {
+    background-color: #ee9c3f;
     font-size: 16px;
     padding: 10px 24px;
     border-radius: 8px;
-    }
+    } */
+
+    h1{
+    font-family: Arial, Helvetica, sans-serif;
+       }
+
 </style>

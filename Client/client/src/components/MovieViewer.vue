@@ -3,8 +3,10 @@
     <!-- <vue-core-video-player width="450" src="./vidoe2.mp4"></vue-core-video-player> -->
     <video-player class="video-player-box"
                  ref="videoPlayer"
+                 type= "video/mp4"
                  :options="playerOptions"
-                 :playsinline="true" 
+                 :autoplay="true"
+                 :playsinline="true"
                 ></video-player>
   </div>
 </template>
@@ -62,6 +64,7 @@ export default{
 .video-player.video-player-box{
    height:100%;
   width:100%;
+  
 }
 video {
   /* override other styles to make responsive */

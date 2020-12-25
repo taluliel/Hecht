@@ -14,7 +14,7 @@ import vuetify from './plugins/vuetify';
 import Room from './components/Room';
 import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
-import Home from './components/Home';
+import home from './components/home';
 import FlagIcon from 'vue-flag-icon';
 import i18n from './i18n'
 
@@ -35,7 +35,7 @@ export const storage = firebase.storage();
 
 
 const routes = [
-  {path:'/',name:'HOME',component:Home},
+  {path:'/',name:'home',component:home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer}

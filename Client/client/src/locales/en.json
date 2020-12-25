@@ -1,5 +1,6 @@
 {
-  "museum_name":"Hecht Museum",
-  "start_tour":"Start Tour",
-  "choose_room":"Please choose a room code"
+  "museum_name":"Welcome to the Hecht Museum",
+  "start_tour":"To start the tour, please enter an exhibit code in the box above.",
+  "choose_room":"Choose an exhibit code",
+  "Visit Hecht Museum page": "Visit Hecht Museum page"
 }

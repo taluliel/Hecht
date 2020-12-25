@@ -1,6 +1,6 @@
 <template>
   <div class="room">
-    I am in room {{ currentRoomCode }}
+   <!-- {{ currentRoom.name }} -->
     <feature-viewer
       :image-details="currentRoom"
       :room="currentRoomCode"
@@ -51,6 +51,6 @@ export default {
 <style scoped>
 .room {
   width: 100%;
-  
-}
+  text-align: center;
+   }
 </style>

@@ -2,13 +2,13 @@
 <div class="roomQuery">
  <v-toolbar flat >
  <!-- <v-toolbar-title>Choose room</v-toolbar-title> -->
-  <v-autocomplete
+  <v-autocomplete 
  
       v-model="select"
       :items="items"
       v-on:change="goToRoom"
       cache-items
-      class="mx-8 white--text"
+      class="white--text"
       flat
       hide-no-data
       hide-details
@@ -41,18 +41,15 @@ export default{
     }
   },
   mounted(){
-
     
   },
     methods:{
       goToRoom: function (){
         console.log(this.select);
         this.$router.push(`/room/${this.select}`).catch(err=>{err})
-
       
       }
     }
-
 }
 </script>
 

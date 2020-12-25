@@ -2,8 +2,9 @@
     <v-app-bar
       app
       color="white"
+     
     >
-      <div class="d-flex align-center">
+      <div class="d-flex align-center" >
         <a href="/">
         <v-img
           alt="Hecht Logo"
@@ -25,7 +26,7 @@
         bottom
       >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
+          <v-btn 
             icon
             v-bind="attrs"
             v-on="on"
@@ -44,13 +45,13 @@
 
         <v-list>
           <v-list-item>
-            <v-list-item-title v-on:click="choose('he')">עברית&nbsp;<flag iso="il" /> </v-list-item-title>
+            <v-list-item-title v-on:click="choose('he')">עברית&nbsp;</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title  v-on:click="choose('en')">English&nbsp;<flag iso="us" /> </v-list-item-title>
+            <v-list-item-title  v-on:click="choose('en')">English&nbsp;</v-list-item-title>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title v-on:click="choose('ar')">عربيه&nbsp;<flag iso="eg" /> </v-list-item-title>
+            <v-list-item-title v-on:click="choose('ar')">عربيه&nbsp;</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>

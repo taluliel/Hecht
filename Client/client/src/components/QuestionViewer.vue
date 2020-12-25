@@ -1,10 +1,19 @@
 <template>
   <div class="questions">
-    <ol>
+    <ul>
       <li v-for="(item, index) in questions" :key="index" v-on:click="goToMovie(item.movieName)">
-        {{ item.questionText }}
+        <v-alert
+ :icon="`mdi-numeric-${index+1}-circle-outline`"
+  outlined
+  border="bottom"
+  color="gray"
+  type="info"
+>
+{{ item.questionText }}
+</v-alert>
+       
       </li>
-    </ol>
+    </ul>
   </div>
 </template>
 
@@ -20,10 +29,6 @@ export default {
    next(vm =>{
      vm.fetchQuestions(to.params.id)
    })
-
-    //this.featureID = 1;//to.params.id;
-   
-
   
   },
   methods: {
@@ -38,15 +43,12 @@ export default {
       .get()
       .then((querySnapshot) => {
         console.log(querySnapshot);
-        //const room = querySnapshot.docs[0].data();
         querySnapshot.docs.map((questionRaw)=>{
           let questionItem = questionRaw.data();
           this.questions.push(questionItem.question[this.$i18n.locale.toUpperCase()])
           
         })
-       
-        // this.features = room;
-        // do something with documents
+
       });
     }
   },
@@ -54,5 +56,12 @@ export default {
 </script>
 
 <style scoped>
+ul{
+    padding-left: 0;
+    margin-top: 40px;
+  }
+  ul li{
+      list-style-type: none;
+    }
 
 </style>

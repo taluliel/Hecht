@@ -68,11 +68,7 @@ export default {
   border: 3px solid rgb(233, 143, 41);
   position:absolute;
 }
-/* .flex-rectangle:before{
-    content: "";
-    display: block;
-    padding-top: 25%;
-} */
+
 .featureImage {
   border: 1px solid #ddd;
   border-radius: 4px;
