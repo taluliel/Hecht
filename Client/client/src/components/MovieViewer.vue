@@ -5,7 +5,6 @@
                  ref="videoPlayer"
                  type= "video/mp4"
                  :options="playerOptions"
-                 :autoplay="true"
                  :playsinline="true"
                 ></video-player>
   </div>
@@ -28,6 +27,7 @@ export default{
         playerOptions: {
           // videojs options
           muted: false,
+          autoplay: true,
           language: 'en',
           sources: [{
             type: "video/mp4",

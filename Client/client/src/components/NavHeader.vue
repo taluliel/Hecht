@@ -61,6 +61,7 @@
 
 <script>
 import RoomQuery from './RoomQuery'
+import EventBus from '../eventBus'
 
 export default{
     name:'NavHeader',
@@ -70,6 +71,8 @@ export default{
     methods:{
       choose(lang){
         this.$i18n.locale=lang;
+        this.$vuetify.rtl = lang =='he' || lang =='ar';
+        EventBus.$emit('locale_changed',lang);
       },
       back(){
         this.$router.back();

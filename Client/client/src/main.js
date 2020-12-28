@@ -45,6 +45,7 @@ const router = new VueRouter({
   mode:'history',
 })
 
+
 new Vue({
   router,
   vuetify,

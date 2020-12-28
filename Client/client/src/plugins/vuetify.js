@@ -50,7 +50,10 @@ Vue.use(Vuetify)
 //   messages, // set locale messages
 // })
 
+
+
 export default new Vuetify({
+  rtl:true
   // lang: {
   //   t: (key, ...params) => i18n.t(key, params),
   // },
