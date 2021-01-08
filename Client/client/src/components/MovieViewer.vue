@@ -22,6 +22,12 @@ export default{
     components:{
       videoPlayer
     },
+    computed: {
+      player() {
+        return this.$refs.videoPlayer.player
+      }
+    },
+
     data:()=> ({
       selectedMovie:"",
         playerOptions: {
@@ -42,11 +48,18 @@ export default{
      mounted(){
         this.getMovie(this.$route.params.id);
     },
+    
     methods:{   
+      
      async getMovie(movieName){
       this.selectedMovie = await storage.ref(`/videos/${movieName}.mp4`).getDownloadURL();
       this.playerOptions.sources[0].src=this.selectedMovie;
      }
+    },
+    beforeDestroy(){
+      let viewRatePercentage = (this.player.currentTime()/this.player.duration())*100;
+      this.$gtag.event('views_movie',{movieName:this.$route.params.id,viewRate:viewRatePercentage.toFixed(2)});
+      console.log(viewRatePercentage.toFixed(2));
     }
 
 }

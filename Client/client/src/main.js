@@ -9,6 +9,8 @@ import 'firebase/firestore';
 import 'firebase/storage';
 import {firestorePlugin} from 'vuefire'
 
+import VueGtag from "vue-gtag";
+
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import Room from './components/Room';
@@ -44,6 +46,10 @@ const router = new VueRouter({
   routes, // short for `routes: routes`
   mode:'history',
 })
+
+Vue.use(VueGtag, {
+  config: { id: "G-TL7KC7BPET" }
+}, router);
 
 
 new Vue({

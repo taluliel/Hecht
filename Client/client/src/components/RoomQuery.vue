@@ -12,6 +12,7 @@
       flat
       hide-no-data
       hide-details
+      hide-selected
       item-text="roomCode"
     item-value="roomCode"
       :label="nav_label"
