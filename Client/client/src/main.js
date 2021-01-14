@@ -17,6 +17,7 @@ import Room from './components/Room';
 import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
 import home from './components/home';
+import LoadingScreen from './components/LoadingScreen';
 import FlagIcon from 'vue-flag-icon';
 import i18n from './i18n'
 
@@ -37,10 +38,11 @@ export const storage = firebase.storage();
 
 
 const routes = [
+  {path:'/LoadingScreen',name:'LoadingScreen',component:LoadingScreen},
   {path:'/',name:'home',component:home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
-{path:'/movie/:id',name:'movie',component:MovieViewer}
+{path:'/movie/:id',name:'movie',component:MovieViewer},
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`

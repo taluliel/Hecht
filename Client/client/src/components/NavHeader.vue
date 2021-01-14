@@ -2,7 +2,7 @@
     <v-app-bar
       app
       color="white"
-     
+     ז
     >
       <div class="d-flex align-center" >
         <a href="/">

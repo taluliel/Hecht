@@ -1,9 +1,9 @@
 <template>
+
 <div class="home"> 
   <h2>{{ $t('museum_name') }}</h2>
-  <!-- <button type="button" class="start">{{ $t('start_tour') }}</button> -->
      <p id="startTour" class="font-weight-medium" style="background-color: #ee9c3f;">
-       {{ $t('start_tour') }}
+     {{ $t('start_tour') }}
     </p>
   </div>
 </template>
@@ -26,10 +26,7 @@ export default {
       items: db.collection('Rooms').where('roomCode',"!=",null)
     }
   },
-  mounted(){
 
-    
-  },
     methods:{
       goToRoom: function (){
         console.log(this.select);
@@ -72,12 +69,6 @@ export default {
 
     }
   }
-  /* .start {
-    background-color: #ee9c3f;
-    font-size: 16px;
-    padding: 10px 24px;
-    border-radius: 8px;
-    } */
 
     h1{
     font-family: Arial, Helvetica, sans-serif;

@@ -1,6 +1,8 @@
 <template>
   <div class="room">
-   <!-- {{ currentRoom.name }} -->
+    <span v-if="currentRoom">
+       {{ currentRoom.title[this.$i18n.locale.toUpperCase()] }}
+    </span>
     <feature-viewer
       :image-details="currentRoom"
       :room="currentRoomCode"
@@ -19,7 +21,7 @@ export default {
     items: [2000, 3000, 4000, 5000],
     currentRoomCode: null,
     currentRoom: null,
-  }),
+      }),
   mounted(){
       this.getFeatures(this.$route.params.id);
   },
@@ -33,7 +35,7 @@ export default {
       .then((querySnapshot) => {
         const room = querySnapshot.docs[0].data();
         this.currentRoom = room;
-      
+                    
       });
       }
   },

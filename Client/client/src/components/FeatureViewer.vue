@@ -46,14 +46,13 @@ export default {
     if (this.imageDetails.name) {
       this.getImageUrl(this.imageDetails.name);
     }
-    console.log(this.imageDetails);
+    
   },
   computed: {
     getImage: function () {
       return this.imageDetails.name;
     },
     getCoords: function () {
-        console.log(this.imageDetails);
       return this.imageDetails.coords;
     },
   },

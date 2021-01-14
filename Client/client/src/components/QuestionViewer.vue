@@ -6,7 +6,7 @@
         :key="index"
         v-on:click="goToMovie(item.movieName)"
       >
-        <v-alert
+        <v-alert class="text-center"
           :icon="`mdi-numeric-${index + 1}-circle-outline`"
           outlined
           border="bottom"
