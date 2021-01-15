@@ -1,8 +1,19 @@
 <template>
-<div class="roomQuery">
- <v-toolbar flat >
- <!-- <v-toolbar-title>Choose room</v-toolbar-title> -->
-  <v-autocomplete 
+  <div class="roomQuery">
+      <v-text-field v-model="select"
+        :placeholder="choose_room"
+         outlined
+          prepend-inner-icon="mdi-magnify"
+        :items="items"
+        v-on:change="goToRoom"
+        cache-items
+        item-text="roomCode"
+        item-value="roomCode">
+
+             
+      </v-text-field>
+
+      <!-- <v-autocomplete 
  
       v-model="select"
       :items="items"
@@ -13,49 +24,48 @@
       hide-no-data
       hide-details
       hide-selected
-      item-text="roomCode"
+  item-text="roomCode"
     item-value="roomCode"
       :label="nav_label"
     ></v-autocomplete>
-    
-  </v-toolbar>
-</div>
+     -->
 
+  </div>
 </template>
 
 <script>
-import {db} from '../main';
-export default{
-    name:'roomQuery',
-    data:()=> ({
-        items:[],
-        select:null
-    }),
-    computed:{
-      nav_label:function(){
-        return this.$t('choose_room');
-      }
+import { db } from "../main";
+export default {
+  name: "roomQuery",
+  data: () => ({
+    items: [],
+    select: null,
+  }),
+  computed: {
+    choose_room: function () {
+      return this.$t("choose_room");
     },
-    firestore(){
+  },
+  firestore() {
     return {
-      items: db.collection('Rooms').where('roomCode',"!=",null)
-    }
+      items: db.collection("Rooms").where("roomCode", "!=", null),
+    };
   },
-  mounted(){
-    
+  mounted() {},
+  methods: {
+    goToRoom: function () {
+      console.log(this.select);
+      this.$router.push(`/room/${this.select}`).catch((err) => {
+        err;
+      });
+    },
   },
-    methods:{
-      goToRoom: function (){
-        console.log(this.select);
-        this.$router.push(`/room/${this.select}`).catch(err=>{err})
-      
-      }
-    }
-}
+};
 </script>
 
 <style scoped>
-.roomQuery{
-    width:100%;
-  }
+.roomQuery {
+  width: 100%;
+}
 </style>
+

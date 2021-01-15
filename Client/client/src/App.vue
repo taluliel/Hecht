@@ -6,43 +6,37 @@
     <v-main class="main">
       <router-view></router-view>
     </v-main>
-    <!-- <v-footer color="#ee9c3f"
-    padless>
-      <v-col class="text-center" cols="12">
-        <a href="https://mushecht.haifa.ac.il/index.php?option=com_sppagebuilder&view=page&id=1&Itemid=101&lang=he"
-          >{{ $t('Visit Hecht Museum page') }}</a>
-      </v-col>
-    </v-footer> -->
+    <Footer></Footer>
   </v-app>
 </div>
 </template>
 
 <script>
+import Footer from './components/footer';
 import LoadingScreen from './components/LoadingScreen.vue';
 import NavHeader from "./components/NavHeader";
 export default {
   name: "App",
   components: {
     NavHeader,
-    LoadingScreen
+    LoadingScreen,
+    Footer
   },
   mounted(){
-    setTimeout(function(){this.splashing=false;}.bind(this),5000);
+    this.splashing && setTimeout(function(){this.splashing=false;}.bind(this),5000);
   },
 
   data: () => ({
     //
-    splashing:true
+    splashing:window.location.search !=='?home'
   }),
 };
 </script>
 <style scoped>
 .main {
   /* background: rgb(255, 229, 196); */
-    background: white;
+    background: #F4F4F1;
     
 }
-footer {
-  background-color: rgb(252, 152, 70);
-}
+
 </style>

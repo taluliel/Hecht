@@ -1,9 +1,9 @@
 <template>
   <div class="room">
-    <span v-if="currentRoom">
+    <span class= "titlePOI" v-if="currentRoom">
        {{ currentRoom.title[this.$i18n.locale.toUpperCase()] }}
     </span>
-    <feature-viewer
+    <feature-viewer class="feature"
       :image-details="currentRoom"
       :room="currentRoomCode"
     ></feature-viewer>
@@ -55,4 +55,28 @@ export default {
   width: 100%;
   text-align: center;
    }
+   .titlePOI{
+ 
+    width: 330px;
+    height: 22px;
+    right: 16px;
+    top: 96px;
+
+/* Assistent/subtitle/default */
+
+   line-height: 22px;
+  text-align: center;
+  color: #5c3f55;
+  font-weight: bold;
+      font-size: 18px;
+   }
+
+  .feature{
+   
+width: 375px;
+left: 0px;
+top: 159px;
+
+  }
+
 </style>

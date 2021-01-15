@@ -1,93 +1,167 @@
 <template>
-    <v-app-bar
-      app
-      color="white"
-     ז
-    >
-      <div class="d-flex align-center" >
-        <a href="/">
-        <v-img
+  <div>
+    <v-toolbar class="primaryNav">
+        <v-row>
+    <v-col cols="2">
+      <v-img
+        class="university"
+        alt="university Logo"
+        contain
+        position="absolute"
+        src="../assets/haifa_uni_logo.png"
+        max-width="28px"
+      />
+ </v-col>
+<v-col cols="8">
+      <v-toolbar-title class="title">
+        {{ $t("title") }}
+      </v-toolbar-title>
+ </v-col>
+<v-col cols="2">
+      <a href="/?home" >
+        <v-img class="hecht"
           alt="Hecht Logo"
-          class="shrink mr-2"
           contain
-          src="../assets/logo.jpeg"
-          transition="scale-transition"
-          width="40"
+          position="absolute"
+          src="../assets/hecht_Logo.png"
+          max-width="28px"
         />
-        </a>
-      </div>
+      </a>
+      </v-col >
+      </v-row>
+    </v-toolbar>
 
-        <div class="roomQuery-container">
+
+    <div class="fram22">
+      <v-btn icon v-on:click="back()" class="chevron-right">
+        <v-icon> mdi-chevron-right </v-icon>
+      </v-btn>
+      <div class="roomQuery-container">
         <RoomQuery></RoomQuery>
-        </div>
-      <v-spacer></v-spacer>
-      <v-menu
-        left
-        bottom
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn 
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-          <div>
-            <v-btn
-            icon
-            v-on:click="back()"
-        >
-            <v-icon>mdi-arrow-left</v-icon>
-            </v-btn>
-          </div>
-        </template>
-
-        <v-list>
-          <v-list-item>
-            <v-list-item-title v-on:click="choose('he')">עברית&nbsp;</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title  v-on:click="choose('en')">English&nbsp;</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title v-on:click="choose('ar')">عربيه&nbsp;</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
-    
+      </div>
+    </div>
+  </div>
 </template>
 
+
+
 <script>
-import RoomQuery from './RoomQuery'
-import EventBus from '../eventBus'
+import RoomQuery from "./RoomQuery";
+import EventBus from "../eventBus";
 
-export default{
-    name:'NavHeader',
-    components:{
-        RoomQuery
+export default {
+  name: "NavHeader",
+  components: {
+    RoomQuery,
+  },
+  methods: {
+    choose(lang) {
+      this.$i18n.locale = lang;
+      this.$vuetify.rtl = lang == "he" || lang == "ar";
+      EventBus.$emit("locale_changed", lang);
     },
-    methods:{
-      choose(lang){
-        this.$i18n.locale=lang;
-        this.$vuetify.rtl = lang =='he' || lang =='ar';
-        EventBus.$emit('locale_changed',lang);
-      },
-      back(){
-        this.$router.back();
-      }
-    }
-}
-
+    back() {
+      this.$router.back();
+    },
+  },
+};
 </script>
 
 <style scoped>
-.roomQuery-container{
-    width:100%;  
+.roomQuery-container {
+  width: 100%;
 }
 .align-center img {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
+.primaryNav {
+  height: 37px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 
+  /* color/final/background/bright&text */
+
+  background: #fbfaf9;
+  /* effect/drop_shadow/patch */
+
+  box-shadow: 0px 3px 5px rgba(11, 14, 36, 0.15);
+}
+.title {
+  position: absolute;
+  width: 218px;
+ height: 29px;
+  top: 0px;
+  left: calc(50% - 199px / 2 - 5.32px);
+
+  /* Assistent/Headline/H6 */
+
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+
+  text-align: center;
+
+  /* color/final/pink_light */
+
+  color: #5c3f55;
+}
+.university {
+  position: absolute;
+  height: 29px;
+     top: 0px;
+
+}
+.hecht {
+   position: absolute;
+     width: 39px;
+    height: 29px;
+     top: 0px;
+}
+.fram22 {
+  height: 70px;
+  left: 0px;
+  right: 0px;
+  top: 37px;
+
+  /* color/final/background/left menu */
+
+  background: #eeeee9;
+  /* 
+height: 66px;
+left: 0px;
+right: 0px;
+
+background: #EEEEE9; */
+}
+.chevron-right {
+  position: absolute;
+  height: 134px;
+  width: 36px;
+  right: 11px;
+  top: 20px;
+
+  /* color/final/pink_light */
+  color: #5c3f55;
+  mix-blend-mode: normal;
+}
+.roomQuery-container {
+  width: 270px;
+  height: 55px;
+  left: 66px;
+  top: 11px;
+  bottom: 11px;
+  margin-left: 55px;
+  margin-right: 60px;
+  background: #e0e0d8;
+  /* effect/drop_shadow/button_down */
+
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.12),
+    inset 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  
+}
 </style>

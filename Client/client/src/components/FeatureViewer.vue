@@ -1,12 +1,11 @@
 <template>
   <div class="canvas-wrapper">
-    <v-img
+    <v-img  class="featureImage"
       contain
       max-height="390"
       max-width="360"
-      :src="image1"
-      class="featureImage"
-    >
+        :src="image1"
+       >
       <div
         v-for="(item, index) in imageDetails.features"
         :key="index"
@@ -68,11 +67,4 @@ export default {
   position:absolute;
 }
 
-.featureImage {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  max-width: 100%;
-  height: auto;
-}
 </style>
