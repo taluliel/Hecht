@@ -1,4 +1,5 @@
 <template>
+ 
   <div class="roomQuery">
       <v-text-field v-model="select"
         :placeholder="choose_room"
@@ -12,7 +13,6 @@
 
              
       </v-text-field>
-
       <!-- <v-autocomplete 
  
       v-model="select"
@@ -31,6 +31,7 @@
      -->
 
   </div>
+
 </template>
 
 <script>
@@ -66,6 +67,7 @@ export default {
 <style scoped>
 .roomQuery {
   width: 100%;
+top: 5px;
 }
 </style>
 

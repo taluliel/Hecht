@@ -28,7 +28,8 @@ export default {
 
   data: () => ({
     //
-    splashing:window.location.search !=='?home'
+    // splashing:window.location.search !=='?home'
+        splashing:window.location.search =='/LoadingScreen'
   }),
 };
 </script>
@@ -36,6 +37,9 @@ export default {
 .main {
   /* background: rgb(255, 229, 196); */
     background: #F4F4F1;
+    position: relative;
+width: 375px;
+
     
 }
 

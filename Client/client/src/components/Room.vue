@@ -72,7 +72,6 @@ export default {
    }
 
   .feature{
-   
 width: 375px;
 left: 0px;
 top: 159px;

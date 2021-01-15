@@ -8,8 +8,9 @@
       >
         <div class="question-wrapper">
           <div class="question-icon">
-            <img :src="'./assets/'+item.category+'.png'" />
-          </div>
+             <!-- <img :src="'../assets/icon/'+item.category+'.png'" />   -->
+             <img src="../assets/icon/MT.png" /> 
+           </div>
           <div class="question">
             {{ item.questionText }}
           </div>
@@ -38,6 +39,7 @@ export default {
     return {
       featureID: 1,
       questions: [],
+   
     };
   },
   beforeRouteEnter(to, from, next) {

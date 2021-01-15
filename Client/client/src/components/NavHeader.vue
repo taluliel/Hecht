@@ -40,6 +40,7 @@
         <RoomQuery></RoomQuery>
       </div>
     </div>
+
   </div>
 </template>
 

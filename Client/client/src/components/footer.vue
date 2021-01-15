@@ -40,7 +40,7 @@
     </a>
 </v-col >
  <v-col  cols="4">
-    <a href="/">
+    <a href="/map">
       <v-img
         class="map"
         contain
@@ -73,6 +73,11 @@ export default {
 <style scoped>
 .primaryNav {
   background: #fbfaf9;
+   position: fixed;
+    height: 56px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .ex{

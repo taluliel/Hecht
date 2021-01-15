@@ -1,6 +1,6 @@
 <template>
   <div class="movieViewer">
-    <!-- <vue-core-video-player width="450" src="./vidoe2.mp4"></vue-core-video-player> -->
+   
     <video-player class="video-player-box"
                  ref="videoPlayer"
                  type= "video/mp4"
@@ -11,8 +11,7 @@
 </template>
 
 <script>
-// import video1 from '../assets/video1.mp4';
-// require styles
+
 import 'video.js/dist/video-js.css'
 
 import { videoPlayer } from 'vue-video-player'
@@ -72,7 +71,7 @@ export default{
 }
 .video-js{
     width: 100% !important;
-    height: 100% !important;
+    height: 88% !important;
 }
 .video-player.video-player-box{
    height:100%;
