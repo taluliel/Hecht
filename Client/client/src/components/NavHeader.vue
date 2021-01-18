@@ -1,36 +1,36 @@
 <template>
   <div>
     <v-toolbar class="primaryNav">
-        <v-row>
-    <v-col cols="2">
-      <v-img
-        class="university"
-        alt="university Logo"
-        contain
-        position="absolute"
-        src="../assets/haifa_uni_logo.png"
-        max-width="28px"
-      />
- </v-col>
-<v-col cols="8">
-      <v-toolbar-title class="title">
-        {{ $t("title") }}
-      </v-toolbar-title>
- </v-col>
-<v-col cols="2">
-      <a href="/?home" >
-        <v-img class="hecht"
-          alt="Hecht Logo"
-          contain
-          position="absolute"
-          src="../assets/hecht_Logo.png"
-          max-width="28px"
-        />
-      </a>
-      </v-col >
+      <v-row>
+        <v-col cols="2">
+          <v-img
+            class="university"
+            alt="university Logo"
+            contain
+            position="absolute"
+            src="../assets/haifa_uni_logo.png"
+            max-width="28px"
+          />
+        </v-col>
+        <v-col cols="8">
+          <v-toolbar-title class="title">
+            {{ $t("title") }}
+          </v-toolbar-title>
+        </v-col>
+        <v-col cols="2">
+          <a href="/?home">
+            <v-img
+              class="hecht"
+              alt="Hecht Logo"
+              contain
+              position="absolute"
+              src="../assets/hecht_Logo.png"
+              max-width="28px"
+            />
+          </a>
+        </v-col>
       </v-row>
     </v-toolbar>
-
 
     <div class="fram22">
       <v-btn icon v-on:click="back()" class="chevron-right">
@@ -40,7 +40,6 @@
         <RoomQuery></RoomQuery>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -91,7 +90,7 @@ export default {
 .title {
   position: absolute;
   width: 218px;
- height: 29px;
+  height: 29px;
   top: 0px;
   left: calc(50% - 199px / 2 - 5.32px);
 
@@ -113,14 +112,13 @@ export default {
 .university {
   position: absolute;
   height: 29px;
-     top: 0px;
-
+  top: 0px;
 }
 .hecht {
-   position: absolute;
-     width: 39px;
-    height: 29px;
-     top: 0px;
+  position: absolute;
+  width: 39px;
+  height: 29px;
+  top: 0px;
 }
 .fram22 {
   height: 70px;
@@ -139,7 +137,7 @@ right: 0px;
 background: #EEEEE9; */
 }
 .chevron-right {
-  position: absolute;
+  position: fixed;
   height: 134px;
   width: 36px;
   right: 11px;
@@ -163,6 +161,5 @@ background: #EEEEE9; */
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.12),
     inset 0px 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
-  
 }
 </style>

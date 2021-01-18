@@ -8,8 +8,8 @@
       >
         <div class="question-wrapper">
           <div class="question-icon">
-             <!-- <img :src="'../assets/icon/'+item.category+'.png'" />   -->
-             <img src="../assets/icon/MT.png" /> 
+           <img :src="base_url+'assets/icon/'+item.category+'.png'" />   
+             
            </div>
           <div class="question">
             {{ item.questionText }}
@@ -39,7 +39,7 @@ export default {
     return {
       featureID: 1,
       questions: [],
-   
+      base_url:window.myapp.BASE_URL
     };
   },
   beforeRouteEnter(to, from, next) {
