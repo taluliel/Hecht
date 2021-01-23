@@ -2,8 +2,7 @@
   <div class="canvas-wrapper">
     <v-img
       contain
-      max-height="390"
-      max-width="360"
+  
       :src="image1"
       class="featureImage"
     >

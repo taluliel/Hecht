@@ -6,13 +6,11 @@
       <v-main class="main">
         <router-view></router-view>
       </v-main>
-      <Footer></Footer>
-    </v-app>
+      </v-app>
   </div>
 </template>
 
 <script>
-import Footer from "./components/footer";
 import LoadingScreen from "./components/LoadingScreen.vue";
 import NavHeader from "./components/NavHeader";
 export default {
@@ -20,7 +18,7 @@ export default {
   components: {
     NavHeader,
     LoadingScreen,
-    Footer,
+
   },
   mounted() {
     this.splashing &&
@@ -33,9 +31,9 @@ export default {
   },
 
   data: () => ({
-    //
-    // splashing:window.location.search !=='?home'
-    splashing: window.location.search == "/LoadingScreen",
+   
+    splashing:window.location.search !=='?home'
+   
   }),
 };
 </script>

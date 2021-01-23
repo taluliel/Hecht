@@ -3,5 +3,26 @@
   "museum_name":"ברוכים הבאים למוזיאון הכט",
   "start_tour":"על מנת להתחיל בסיור, אנא הכנס קוד מוצג בתיבה למעלה",
   "choose_room":"מהו מספר המוצג?",
-  "Visit Hecht Museum page": "בקרו בעמוד של מוזיאון הכט"
-}
+  "Visit Hecht Museum page": "בקרו בעמוד של מוזיאון הכט",
+  "map": "מפת המוזיאון",
+  "chooseLang": "בחירת שפה",
+  "Instructions": "אפשר לשנות את הבחירה בתפריט הראשי",
+  "floor1": "הקומה הראשונה",
+  "floor2": "הקומה השניה",
+  "Auditorium": "אודיטוריום",
+  "ship": "הספינה העתיקה ממעגן מיכאל",
+  "Phoenicians": "פניקים בחוף הצפוני של ארץ ישראל",
+  "Crafts":"תעשיות ומלאכות קדומות",
+  "revolt": "המרד הגדול",
+  "home": "רחבת הבית הישראלי",
+  "religion": "דן ופולחן",
+  "Entrance" :"כניסה",
+  "office": "חנות ומשרד",
+  "JewishArt":" אמנות יהודית",
+  "FrenchPainting":" ציור צרפתי",
+  "FrenchPainting2":" ציור צרפתי",
+"ExchangingExhibition": "תערוכות מתחלפות",
+"ExchangingExhibitions2": "תערוכות מתחלפות",
+"ThematicViews": "תצוגות נושאיות"
+}  
+

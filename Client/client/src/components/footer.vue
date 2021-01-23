@@ -8,8 +8,12 @@
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
         </v-btn>
       </template>
-
-      <v-list>
+   
+      <v-list  nav>
+             <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
         <v-list-item>
           <v-list-item-title v-on:click="choose('he')"
             >עברית&nbsp;</v-list-item-title
@@ -25,7 +29,9 @@
             >عربيه&nbsp;</v-list-item-title
           >
         </v-list-item>
+           </v-list-item-group> 
       </v-list>
+       
     </v-menu>
     </v-col>
 <v-col cols="4">

@@ -8,22 +8,14 @@
       >
         <div class="question-wrapper">
           <div class="question-icon">
-           <img :src="base_url+'assets/icon/'+item.category+'.png'" />   
+           <img :src="base_url+'assets/icon/'+item.category+'.png'" class="ca" />   
              
            </div>
           <div class="question">
             {{ item.questionText }}
           </div>
         </div>
-        <!-- <v-alert class="text-center"
-          :icon="`mdi-numeric-${index + 1}-circle-outline`"
-          outlined
-          border="bottom"
-          color="gray"
-          type="info"
-        >
-         {{ item.questionText }}
-        </v-alert> -->
+  
       </li>
     </ul>
   </div>
@@ -127,5 +119,8 @@ border-radius: 0px 12px 12px 0px;
 /* Inside Auto Layout */
 align-self: stretch;
 margin: 0px 0px;
+}
+.ca{
+  margin-top: 20px;
 }
 </style>

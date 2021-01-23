@@ -3,7 +3,28 @@
     "museum_name":"مرحبًا بكم في متحف هيشت",
     "start_tour":"لبدء الجولة ، يرجى إدخال الرمز الموضح في المربع أعلاه ",
     "choose_room":"ما هو الرقم المعروض?",
-    "Visit Hecht Museum page": "قم بزيارة صفحة متحف هيشت"
+    "Visit Hecht Museum page": "قم بزيارة صفحة متحف هيشت",
+    "map": "خريطة المتحف",
+    "chooseLang": "اختر لغتك",
+    "Instructions": "يمكنك تغيير التحديد في القائمة الرئيسية",
+    "floor1": "الطابق الأول",
+    "floor2": "الطابق الثاني",
+    "Auditorium": "قاعة محاضرات",
+    "ship": "السفينة القديمة من معجان ميخائيل",
+    "Phoenicians": "الفينيقيون",
+    "Crafts":"الحرف والصناعات القديمة",
+    "revolt": "التمرد الكبير",
+    "home": "البيت الاسرائيلي",
+    "religion": "الدين والعبادة",
+    "Entrance" :"مدخل",
+    "office": "مكتب ومتجر",
+    "JewishArt":"الفن اليهودي",
+    "FrenchPainting":"اللوحة الفرنسية",
+    "FrenchPainting2":"اللوحة الفرنسية",
+  "ExchangingExhibition": "معارض التبادل ",
+  "ExchangingExhibitions2":  "معارض التبادل ",
+  "ThematicViews": "وجهات النظر المواضيعية"
+  
     
   }
 

@@ -18,6 +18,7 @@ import QuestionViewer from './components/QuestionViewer'
 import MovieViewer from './components/MovieViewer';
 import home from './components/home';
 import map from  './components/map';
+import secondFloor from  './components/secondFloor';
 import LoadingScreen from './components/LoadingScreen';
 import FlagIcon from 'vue-flag-icon';
 import i18n from './i18n'
@@ -45,6 +46,7 @@ const routes = [
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer},
 {path:'/map',name:'map',component:map},
+{path:'/secondFloor',name:'secondFloor',component:secondFloor},
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`

@@ -11,24 +11,7 @@
         item-text="roomCode"
         item-value="roomCode">
 
-             
-      </v-text-field>
-      <!-- <v-autocomplete 
- 
-      v-model="select"
-      :items="items"
-      v-on:change="goToRoom"
-      cache-items
-      class="white--text"
-      flat
-      hide-no-data
-      hide-details
-      hide-selected
-  item-text="roomCode"
-    item-value="roomCode"
-      :label="nav_label"
-    ></v-autocomplete>
-     -->
+   </v-text-field>
 
   </div>
 

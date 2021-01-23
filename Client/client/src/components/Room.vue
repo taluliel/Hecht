@@ -1,13 +1,17 @@
 <template>
   <div class="room">
+   <div class="PoI">
     <span class= "titlePOI" v-if="currentRoom">
        {{ currentRoom.title[this.$i18n.locale.toUpperCase()] }}
     </span>
+   </div>
+   <div>
     <feature-viewer class="feature"
       :image-details="currentRoom"
       :room="currentRoomCode"
     ></feature-viewer>
   </div>
+   </div>
 </template>
 
 <script>
@@ -55,6 +59,11 @@ export default {
   width: 100%;
   text-align: center;
    }
+   .PoI{
+         height: 58px;
+  
+  /* color/Beige_4 */
+   }
    .titlePOI{
  
     width: 330px;
@@ -62,20 +71,20 @@ export default {
     right: 16px;
     top: 96px;
 
-/* Assistent/subtitle/default */
+  color: #0f2a48;
 
    line-height: 22px;
   text-align: center;
-  color: #5c3f55;
   font-weight: bold;
       font-size: 18px;
    }
 
   .feature{
-width: 375px;
-left: 0px;
-top: 159px;
-
+    width: 100%;
+    /* left: 0px; */
+    height: 100%;
+    /* top: 173px; */
+    position: fixed;
   }
 
 </style>

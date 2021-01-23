@@ -1,35 +1,132 @@
 <template>
   <div>
     <v-toolbar class="primaryNav">
-      <v-row>
-        <v-col cols="2">
-          <v-img
-            class="university"
-            alt="university Logo"
-            contain
-            position="absolute"
-            src="../assets/haifa_uni_logo.png"
-            max-width="28px"
-          />
-        </v-col>
-        <v-col cols="8">
-          <v-toolbar-title class="title">
-            {{ $t("title") }}
-          </v-toolbar-title>
-        </v-col>
-        <v-col cols="2">
-          <a href="/?home">
+      <v-menu >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+          </v-btn>
+        </template>
+
+        <v-list class="hamburger" :value="shown" :close-on-content-click="true">
+          <v-list-item class="Upmenu">
+            <p class="menuTitle">
+              {{ $t("title") }}
+            </p>
+            <div>
+              <v-btn icon v-on:click="closemenu()">
+                <v-icon> mdi-close-circle-outline </v-icon>
+              </v-btn>
+            </div>
+          </v-list-item>
+
+          <v-list-item class="menuLine">
+            <a href="/map">
+              <v-img
+                class="map"
+                contain
+                src="../assets/map.png"
+                max-width="28px"
+                margin-right="35px"
+              />
+            </a>
+            <v-list-item-title>
+              <button class="title" onclick="window.location.href='/map'">
+                {{ $t("map") }}
+              </button>
+            </v-list-item-title>
+          </v-list-item>
+
+          <v-list-item class="menuLine">
             <v-img
-              class="hecht"
-              alt="Hecht Logo"
+              contain
+              src="../assets/globe.png"
+              max-width="28px"
+              margin-right="35px"
+            />
+
+            <v-list-item-title>
+              <button class="title">
+                {{ $t("chooseLang") }}
+              </button>
+            </v-list-item-title>
+          </v-list-item>
+          <div class="allLang">
+            <v-list-item>
+              <button class="changelang" v-on:click="choose('he')">
+                <img src="../assets/hebrow.png" />
+              </button>
+              <button class="changelang" v-on:click="choose('en')">
+                <img src="../assets/english.png" />
+              </button>
+              <button class="changelang" v-on:click="choose('ar')">
+                <img src="../assets/arabic.png" />
+              </button>
+            </v-list-item>
+          </div>
+          <v-list-item class="menuLine">
+            <v-img
+              contain
+              src="../assets/facebook.png"
+              max-width="28px"
+              margin-right="35px"
+            />
+            <button
+              class="title"
+              onclick="window.location.href='https://www.facebook.com/hechtmus'"
+            >
+              facebook
+            </button>
+          </v-list-item>
+          <v-list-item class="bottom">
+            <div class="icons2">
+            <v-img
+            class="icons"
               contain
               position="absolute"
-              src="../assets/hecht_Logo.png"
-              max-width="28px"
-            />
-          </a>
-        </v-col>
-      </v-row>
+                 src="../assets/HAIFA_UNI.png"
+              max-width="50px"
+         />
+
+            <a href="/?home">
+              <v-img
+                alt="Hecht Logo"
+                contain
+                position="absolute"
+                src="../assets/logo.jpeg"
+              max-width="40px"
+              />
+            </a>
+            </div>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <div class="Hechttitle">
+        <v-toolbar-title>
+          {{ $t("title") }}
+        </v-toolbar-title>
+      </div>
+    
+      <div class="university">
+        <v-img
+          alt="university Logo"
+          contain
+          position="absolute"
+          src="../assets/haifa_uni_logo.png"
+          max-width="28px"
+        />
+      </div>
+      <div class="hecht">
+        <a href="/?home">
+          <v-img
+            alt="Hecht Logo"
+            contain
+            position="absolute"
+            src="../assets/hecht_Logo.png"
+            max-width="28px"
+          />
+        </a>
+      </div>
     </v-toolbar>
 
     <div class="fram22">
@@ -54,6 +151,11 @@ export default {
   components: {
     RoomQuery,
   },
+  data() {
+    return {
+      shown: true,
+    };
+  },
   methods: {
     choose(lang) {
       this.$i18n.locale = lang;
@@ -63,11 +165,18 @@ export default {
     back() {
       this.$router.back();
     },
+    closemenu() {
+      this.shown = false;
+    },
   },
 };
 </script>
 
 <style scoped>
+@font-face {
+  font-family: "Assistant";
+  src: ("/Assistant-Regular.woff2"); /* IE9 Compat Modes */
+}
 .roomQuery-container {
   width: 100%;
 }
@@ -87,16 +196,62 @@ export default {
 
   box-shadow: 0px 3px 5px rgba(11, 14, 36, 0.15);
 }
-.title {
-  position: absolute;
-  width: 218px;
-  height: 29px;
+
+.Upmenu {
+  display: flex;
+  flex-direction: row;
+  padding: 21px 20px 21px 0px;
+
+  position: static;
+  width: 309px;
+  height: 66px;
+  left: calc(50% - 309px / 2);
   top: 0px;
-  left: calc(50% - 199px / 2 - 5.32px);
 
-  /* Assistent/Headline/H6 */
+  /* color/Beige_3 */
 
-  font-family: Assistant;
+  background: #eeeee9;
+  border-radius: 12px 0px 0px 0px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.menuTitle {
+  position: static;
+  width: 235px;
+  height: 22px;
+  left: calc(50% - 235px / 2 + 17px);
+  top: 21px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+
+  align-items: center;
+  text-align: right;
+
+  /* color/blue_light */
+
+  color: #466a85;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  flex-grow: 0;
+  margin: 8px 0px;
+}
+.Hechttitle {
+  width: 245px;
+  height: 29px;
+  top: 10px;
+  left: calc(57% - 199px / 2 - 5.32px);
+
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -107,41 +262,21 @@ export default {
 
   /* color/final/pink_light */
 
-  color: #5c3f55;
-}
-.university {
-  position: absolute;
-  height: 29px;
-  top: 0px;
-}
-.hecht {
-  position: absolute;
-  width: 39px;
-  height: 29px;
-  top: 0px;
+  color: #466a85;
 }
 .fram22 {
   height: 70px;
   left: 0px;
   right: 0px;
   top: 37px;
-
-  /* color/final/background/left menu */
-
   background: #eeeee9;
-  /* 
-height: 66px;
-left: 0px;
-right: 0px;
-
-background: #EEEEE9; */
 }
 .chevron-right {
   position: fixed;
-  height: 134px;
-  width: 36px;
+  /* height: 134px; */
+  /* width: 36px; */
   right: 11px;
-  top: 20px;
+  top: 68px;
 
   /* color/final/pink_light */
   color: #5c3f55;
@@ -162,4 +297,122 @@ background: #EEEEE9; */
     inset 0px 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
 }
+
+.menuLine {
+  padding: 21px 18px 21px 0px;
+  position: static;
+  background: #f4f4f1;
+      padding-left: 28px;
+    padding-right: 19px;
+}
+.title {
+  position: static;
+  width: 200px;
+  height: 22px;
+  left: calc(50% - 200px / 2 + 4.5px);
+  top: 21px;
+    margin-left: 15px;
+    margin-right: 15px;
+  color: #0f2a48;
+}
+
+.allLang {
+  /* Auto Layout */
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  padding: 10px 52px 21px 0px;
+
+  position: static;
+  width: 309px;
+  height: 75px;
+  left: calc(50% - 309px / 2);
+  top: 267px;
+
+  /* color/Beige_2 */
+
+  background: #f4f4f1;
+  border-radius: 0px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 8;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+.changelang {
+  position: static;
+  width: 44px;
+  height: 44px;
+  left: 93px;
+  top: 10px;
+
+  /* color/Beige_3 */
+
+  background: #eeeee9;
+  border-radius: 12px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 16px 5px;
+}
+.hamburger {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0px;
+
+  width: 309px;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+
+  /* color/Beige_3 */
+
+  background: #eeeee9;
+  /* effect/drop_shadow/patch */
+
+  box-shadow: 0px 3px 5px rgba(11, 14, 36, 0.15);
+}
+.bottom{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+padding: 20px 0px;
+
+position: static;
+width: 309px;
+height: 235px;
+left: calc(50% - 309px/2);
+top: 410px;
+   
+/* color/Beige_2 */
+
+background: #F4F4F1;
+border-radius: 0px 0px 0px 12px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 11;
+flex-grow: 1;
+margin: 0px 0px;
+}
+.icons{
+    margin-left: 25px;
+   margin-right: 25px;
+}
+.icons2{
+     position: fixed;
+    display: flex;
+    width: 190px;
+}
+
 </style>
