@@ -24,6 +24,7 @@
 <script>
 import { db } from "../main";
 import EventBus from "../eventBus";
+import {logUser} from '../utils/helper';
 
 export default {
   name: "questions",
@@ -41,6 +42,7 @@ export default {
   },
   mounted() {
     let vm1 = this;
+  logUser("Checking the questions");
     EventBus.$on("locale_changed", function (lang) {
       console.log(lang);
       vm1.fetchQuestions(vm1.featureID);

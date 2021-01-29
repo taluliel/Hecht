@@ -14,22 +14,22 @@
       <button class="Auditorium" onclick="window.location.href='/map'">
         {{ $t("Auditorium") }}
       </button>
-      <button class="ship" onclick="window.location.href='/map'">
+      <button class="ship" onclick="window.location.href='/ship'">
         {{ $t("ship") }}
       </button>
-      <button class="Phoenicians" onclick="window.location.href='/map'">
+      <button class="Phoenicians" onclick="window.location.href='/Phoenicians'">
         {{ $t("Phoenicians") }}
       </button>
-      <button class="Crafts" onclick="window.location.href='/map'">
+      <button class="Crafts" onclick="window.location.href='/Crafts'">
         {{ $t("Crafts") }}
       </button>
          <button class="revolt" onclick="window.location.href='/map'">
         {{ $t("revolt") }}
       </button>
-         <button class="israelihome" onclick="window.location.href='/map'">
+         <button class="israelihome" onclick="window.location.href='/israeliHome'">
         {{ $t("home") }}
       </button>
-         <button class="religion" onclick="window.location.href='/map'">
+         <button class="religion" onclick="window.location.href='/religion'">
         {{ $t("religion") }}
       </button>
           <button class="Entrance" onclick="window.location.href='/map'">
@@ -54,7 +54,7 @@ export default {
   width: 108px;
   height: 22px;
   right: 66px;
-  top: 15px;
+  top: 11px;
 
   display: flex;
   align-items: center;
@@ -66,23 +66,24 @@ export default {
 }
 .floor1 {
   position: absolute;
-  height: 58px;
+  height: 49px;
   left: 0px;
   right: 0px;
   /* color/Beige_4 */
-
+border-style: groove;
   background: #cccbc2;
 }
 .imgMap {
+  margin-top: 5px;
   width: 100%;
   height: 94%;
 }
 .floors_1 {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  right: 14px;
-  top: 9px;
+     position: absolute;
+    width: 38px;
+    height: 31px;
+    right: 14px;
+    top: 7px;
 
   /* color/Beige_5 */
 

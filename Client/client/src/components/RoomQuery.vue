@@ -1,20 +1,19 @@
 <template>
- 
   <div class="roomQuery">
-      <v-text-field v-model="select"
-        :placeholder="choose_room"
-         outlined
-          prepend-inner-icon="mdi-magnify"
-        :items="items"
-        v-on:change="goToRoom"
-        cache-items
-        item-text="roomCode"
-        item-value="roomCode">
-
-   </v-text-field>
-
+    <div class="goToRoom">
+      <button v-on:click="goToRoom">
+        <img src="../assets/return.png" />
+      </button>
+    </div>
+    <input
+      class="chooseRoom"
+      v-model="select"
+      :placeholder="choose_room"
+      :items="items"
+      item-text="roomCode"
+      item-value="roomCode"
+    />
   </div>
-
 </template>
 
 <script>
@@ -49,8 +48,49 @@ export default {
 
 <style scoped>
 .roomQuery {
-  width: 100%;
-top: 5px;
+  position: absolute;
+  left: 105px;
+  right: 63px;
+  height: 8%;
+  border-radius: 2px;
+  margin-top: 8px;
+  background: #e7e7df;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.12),
+    inset 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgBtVRBTsMwENx1yj1PgBeQJ5Qf0BdwRBUHhESRkBBxUW8tEifaW9UXAC8gT8gP6BN6pqkHuxTRBJvaIYwUOd5d73jt9RD9M9jl6I8m54ohCRzT7jQ5L1VHXnfnVY+whd+MHo8V0YNfcgMk2OOpzdOyGQU4MbUB6N/1upJ2IB1NoIe2N8EmqaQG0HI5bodjaSFtjoAFnxBofzPNqWZFJQI5HLch9GWBF/oGttgoTu8nb8a+0g02uDx9Jk+Uusgkh8KMGPHW7mn9r5Mz1EtENKUAlI8IiPXRHJaSfzsTsN4PY0EBKFXASh3pIfltAa9WHapLIK/OckXou4IVaGZiqC6BQfROmSs4QuH0eRN86gn/3CXTPHT3BtZ3oLvlQlWevoC7smCCNQlzuj0vgIyaIpC9bqalonTZA22jpggM6mqPF4EROnNEvnIdTPAFQ6K1PqU/QIQE8xIH5gtZIxzGzGYvBJKiZdOpNXJvAtNFrM+/KmxRJJ4i5lfLkkxXFqRRjeEDLjiSrPZ461QAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.goToRoom {
+  background: #f4f4f1;
+  box-shadow: 0px 0px 2px rgba(32, 36, 71, 0.12),
+    0px 2px 2px rgba(32, 36, 71, 0.15);
+  position: fixed;
+  top: 65px;
+  left: 48px;
+  color: #5c3f55;
+  mix-blend-mode: normal;
+}
+.chooseRoom {
+  position: absolute;
+  right: 22px;
+  top: 6px;
+  bottom: 8px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 137% */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  /* color/blue_dark_50% */
+
+  color: #7f8c98;
 }
 </style>
 

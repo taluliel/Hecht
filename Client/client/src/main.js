@@ -19,7 +19,11 @@ import MovieViewer from './components/MovieViewer';
 import home from './components/home';
 import map from  './components/map';
 import secondFloor from  './components/secondFloor';
-import LoadingScreen from './components/LoadingScreen';
+import Phoenicians from  './components/Phoenicians';
+import ship from  './components/ship';
+import Crafts from  './components/Crafts';
+import religion from  './components/religion';
+import israeliHome from  './components/israeliHome';
 import FlagIcon from 'vue-flag-icon';
 import i18n from './i18n'
 
@@ -40,13 +44,17 @@ export const storage = firebase.storage();
 
 
 const routes = [
-  {path:'/LoadingScreen',name:'LoadingScreen',component:LoadingScreen},
-  {path:'/',name:'home',component:home},
+    {path:'/',name:'home',component:home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer},
 {path:'/map',name:'map',component:map},
 {path:'/secondFloor',name:'secondFloor',component:secondFloor},
+{path:'/Phoenicians',name:'Phoenicians',component:Phoenicians},
+{path:'/ship',name:'ship',component:ship},
+{path:'/Crafts',name:'Crafts',component:Crafts},
+{path:'/religion',name:'religion',component:religion},
+{path:'/israeliHome',name:'israeliHome',component:israeliHome},
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`

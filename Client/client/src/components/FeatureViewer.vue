@@ -2,7 +2,6 @@
   <div class="canvas-wrapper">
     <v-img
       contain
-  
       :src="image1"
       class="featureImage"
     >
@@ -59,13 +58,19 @@ export default {
 </script>
 <style scoped>
 .featureImage {
-  clip-path: url(#clip);
+
+  clip-path: url(#clip); 
+/*    
+  mask-image: url("../assets/rectangle.svg?inline");
+  mask-size:100vmin;
+  mask-repeat: no-repeat;
+  mask-position: center; */
 }
-.flex-rectangle {
+ .flex-rectangle {
 
   border: 3px solid rgb(233, 143, 41);
   position:absolute;
-}
+} 
 
 .featureImage {
   border: 1px solid #ddd;
@@ -73,5 +78,7 @@ export default {
   padding: 5px;
   max-width: 100%;
   height: auto;
+  /* position: absolute;
+  clip: rect(30px, 170px, 170px, 30px); */
 }
 </style>

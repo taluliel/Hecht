@@ -16,23 +16,18 @@
       <button class="office" onclick="window.location.href='/map'">
         {{ $t("office") }}
       </button>
-      <button class="JewishArt" onclick="window.location.href='/map'">
-        {{ $t("JewishArt") }}
-      </button>
-      <button class="ExchangingExhibitions2" onclick="window.location.href='/map'">
-        {{ $t("ExchangingExhibitions2") }}
+
+      <button class="ThematicViews" onclick="window.location.href='/map'">
+        {{ $t("ThematicViews") }}
       </button>
       <button class="ExchangingExhibition" onclick="window.location.href='/map'">
         {{ $t("ExchangingExhibition") }}
       </button>
-         <button class="FrenchPainting" onclick="window.location.href='/map'">
-        {{ $t("FrenchPainting") }}
+         <button class="ArtDepartment" onclick="window.location.href='/map'">
+        {{ $t("ArtDepartment") }}
       </button>
-          <button class="FrenchPainting2" onclick="window.location.href='/map'">
-        {{ $t("FrenchPainting2") }}
-      </button>
-          <button class="ThematicViews" onclick="window.location.href='/map'">
-        {{ $t("ThematicViews") }}
+          <button class="ExchangingExhibition2" onclick="window.location.href='/map'">
+        {{ $t("ExchangingExhibition2") }}
       </button>
        
     </div>
@@ -50,11 +45,12 @@ export default {
   background: #cccbc2;
 }
 .floorTitle2 {
-  position: absolute;
+position: absolute;
   width: 108px;
   height: 22px;
   right: 66px;
-  top: 15px;
+  top: 11px;
+
 
   display: flex;
   align-items: center;
@@ -66,23 +62,24 @@ export default {
 }
 .floor2 {
   position: absolute;
-  height: 58px;
+  height: 49px;
   left: 0px;
   right: 0px;
   /* color/Beige_4 */
-
+border-style: groove;
   background: #cccbc2;
 }
 .imgMap {
+    margin-top: 5px;
   width: 100%;
   height: 94%;
 }
 .floors_2 {
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  right: 14px;
-  top: 9px;
+    position: absolute;
+    width: 38px;
+    height: 31px;
+    right: 14px;
+    top: 7px;
 
   /* color/Beige_5 */
 
@@ -123,18 +120,7 @@ left: calc(50% - 12px/2 + 146.5px);
   letter-spacing: 0.2px;
   color: #0f2a48;
 }
-.JewishArt {
-  position: absolute;
-  width: 63px;
-left: calc(50% - 59px/2 - 5px);
-  top: 32%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  text-align: center;
-  letter-spacing: 0.2px;
-  color: #0f2a48;
-}
+
 .ExchangingExhibition {
   position: absolute;
   width: 58px;
@@ -147,7 +133,7 @@ left: calc(50% - 58px/2 + 122.5px);
   letter-spacing: 0.2px;
   color: #0f2a48;
 }
-.ExchangingExhibitions2 {
+.ThematicViews {
   position: absolute;
   width: 85px;
 left: calc(50% - 85px/2 + 79px);
@@ -159,7 +145,7 @@ left: calc(50% - 85px/2 + 79px);
   letter-spacing: 0.2px;
   color: #0f2a48;
 }
-.FrenchPainting{
+.ArtDepartment{
     position: absolute;
  width: 73px;
 left: calc(50% - 84px/2 + 0px);
@@ -171,19 +157,8 @@ left: calc(50% - 84px/2 + 0px);
   letter-spacing: 0.2px;
   color: #0f2a48;
 }
-.FrenchPainting2{
-    position: absolute;
-width: 82px;
-    left: calc(50% - 73px/2 - 62px);
-  top: 53%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  text-align: center;
-  letter-spacing: 0.2px;
-  color: #0f2a48;
-}
-.ThematicViews{
+
+.ExchangingExhibition2{
     position: absolute;
     width: 89px;
     left: calc(50% - 67px/2 - 110px);

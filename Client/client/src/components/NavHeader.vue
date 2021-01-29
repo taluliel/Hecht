@@ -1,7 +1,9 @@
 <template>
   <div>
     <v-toolbar class="primaryNav">
-      <v-menu >
+      <v-menu 
+      max-height="100%"
+      left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -37,6 +39,7 @@
             </v-list-item-title>
           </v-list-item>
 
+        <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
             <v-img
               contain
@@ -64,20 +67,7 @@
               </button>
             </v-list-item>
           </div>
-          <v-list-item class="menuLine">
-            <v-img
-              contain
-              src="../assets/facebook.png"
-              max-width="28px"
-              margin-right="35px"
-            />
-            <button
-              class="title"
-              onclick="window.location.href='https://www.facebook.com/hechtmus'"
-            >
-              facebook
-            </button>
-          </v-list-item>
+           <v-divider class="divider"></v-divider>
           <v-list-item class="bottom">
             <div class="icons2">
             <v-img
@@ -101,6 +91,7 @@
           </v-list-item>
         </v-list>
       </v-menu>
+
       <div class="Hechttitle">
         <v-toolbar-title>
           {{ $t("title") }}
@@ -136,6 +127,7 @@
       <div class="roomQuery-container">
         <RoomQuery></RoomQuery>
       </div>
+       <v-divider class="divider"></v-divider>
     </div>
   </div>
 </template>
@@ -178,7 +170,7 @@ export default {
   src: ("/Assistant-Regular.woff2"); /* IE9 Compat Modes */
 }
 .roomQuery-container {
-  width: 100%;
+  width: 90%;
 }
 .align-center img {
   cursor: pointer;
@@ -196,7 +188,6 @@ export default {
 
   box-shadow: 0px 3px 5px rgba(11, 14, 36, 0.15);
 }
-
 .Upmenu {
   display: flex;
   flex-direction: row;
@@ -281,21 +272,6 @@ export default {
   /* color/final/pink_light */
   color: #5c3f55;
   mix-blend-mode: normal;
-}
-.roomQuery-container {
-  width: 270px;
-  height: 55px;
-  left: 66px;
-  top: 11px;
-  bottom: 11px;
-  margin-left: 55px;
-  margin-right: 60px;
-  background: #e0e0d8;
-  /* effect/drop_shadow/button_down */
-
-  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.12),
-    inset 0px 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 2px;
 }
 
 .menuLine {
@@ -414,5 +390,20 @@ margin: 0px 0px;
     display: flex;
     width: 190px;
 }
+.divider{
+  position: static;
+width: 309px;
+height: 2px;
+left: calc(50% - 309px/2);
+top: 204px;
 
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 6;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px 0px;
+}
 </style>

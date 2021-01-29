@@ -68,19 +68,14 @@ export default{
 .movieViewer{
   height:100%;
   width:100%;
- background-image: url("../assets/screen.png");
-  background-size: 100% 77%;
 }
 .video-js{
     width: 100% !important;
-    height: 88% !important;
+    height: 100% !important;
 }
 .video-player.video-player-box{
-position: absolute;
-    left: 7.79%;
-    right: 8.09%;
-    top: 15.09%;
-    bottom: 39.42%;
+   height:100%;
+  width:100%;
   
 }
 video {
@@ -88,5 +83,4 @@ video {
   width: 100% !important;
   height:100%;
 }
-
 </style>
