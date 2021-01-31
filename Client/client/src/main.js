@@ -47,7 +47,9 @@ const routes = [
     {path:'/',name:'home',component:home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
-{path:'/movie/:id',name:'movie',component:MovieViewer},
+{path:'/movie/:id',name:'movie',component:MovieViewer,props:(route)=>({
+question:{},...route.params
+})},
 {path:'/map',name:'map',component:map},
 {path:'/secondFloor',name:'secondFloor',component:secondFloor},
 {path:'/Phoenicians',name:'Phoenicians',component:Phoenicians},

@@ -1,6 +1,6 @@
 <template>
   <div class="movieViewer">
-   
+   <question :questionText="question" :category="category"/><br/>
     <video-player class="video-player-box"
                  ref="videoPlayer"
                  type= "video/mp4"
@@ -16,10 +16,12 @@ import 'video.js/dist/video-js.css'
 
 import { videoPlayer } from 'vue-video-player'
 import { storage } from "../main";
+import Question from './Question';
 export default{
     name:'movieViewer',
     components:{
-      videoPlayer
+      videoPlayer,
+      Question
     },
     computed: {
       player() {
@@ -29,6 +31,8 @@ export default{
 
     data:()=> ({
       selectedMovie:"",
+      question:"",
+      category:"",
         playerOptions: {
           // videojs options
           muted: false,
@@ -42,17 +46,20 @@ export default{
     }),
     beforeRouteEnter(to, from, next) {
    next(vm =>{
-     vm.getMovie(to.params.id)
+     vm.getMovie(to.params.id,to.query.item)
    })},
      mounted(){
-        this.getMovie(this.$route.params.id);
+        this.getMovie(this.$route.params.id,this.$route.query.item);
     },
     
     methods:{   
       
-     async getMovie(movieName){
+     async getMovie(movieName,questionDetails){
       this.selectedMovie = await storage.ref(`/videos/${movieName}.mp4`).getDownloadURL();
       this.playerOptions.sources[0].src=this.selectedMovie;
+      this.question = questionDetails.question;
+      this.category = questionDetails.category;
+
      }
     },
     beforeDestroy(){
@@ -66,12 +73,11 @@ export default{
 
 <style>
 .movieViewer{
-  height:100%;
-  width:100%;
+   width:100%;
 }
 .video-js{
     width: 100% !important;
-    height: 100% !important;
+  
 }
 .video-player.video-player-box{
    height:100%;
