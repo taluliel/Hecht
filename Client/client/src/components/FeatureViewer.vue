@@ -22,6 +22,8 @@
 </template>
 <script>
 import { storage } from "../main";
+import { logUser } from '../utils/helper';
+
 export default {
   name: "featureViewer",
   props: { imageDetails: Object, room: String },
@@ -30,6 +32,7 @@ export default {
   },
   methods: {
     goToQuestionCategories(featureID) {
+      logUser(`In feature ${featureID}`);
       this.$router.push(`/feature/${featureID}`).catch((err) => {
         err;
       });

@@ -1,5 +1,5 @@
 
-//import { storage } from "../main";
+import { db } from "../main";
 export function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -29,17 +29,29 @@ export function getCookie(cname) {
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
 
-    export  function logUser(action){
-      const log = {};
+    export  async function logUser(action){
+    
       let user = getCookie('hechtUser');
       let t = new Date();
       if(user===''){
          setCookie('hechtUser',CreateGuid(),1);
          user = getCookie('hechtUser');
       }
-      if(!log[user]){
-          log[user]={};
-      }
-      log[user][t.getDate()+'/'+t.getMonth()+1+'/'+t.getFullYear()+' '+t.getHours()+":"+t.getMinutes()+":"+t.getSeconds()]=action;
-      console.log(log);
+      const log = {"action":action,timestamp:t.toJSON()};
+      const userDocRef = db.collection("logs").doc(user);
+      userDocRef.get().then((docSnapshot)=>{
+        if(docSnapshot.exists){
+          let userLogs = docSnapshot.data();
+          console.log(userLogs);
+          if(userLogs.actions && userLogs.actions.length){
+            userLogs.actions.push(log);
+            userDocRef.update(userLogs).then((result)=>console.log(result));
+          }
+        } else{
+          const action={actions:[log]};
+          userDocRef.set(action).then((result)=>{
+            console.log(result);
+          })
+        }
+      })
     }

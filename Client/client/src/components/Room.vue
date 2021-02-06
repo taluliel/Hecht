@@ -17,6 +17,7 @@
 
 <script>
 import { db } from "../main";
+import { logUser } from '../utils/helper';
 import FeatureViewer from "./FeatureViewer";
 
 export default {
@@ -46,6 +47,8 @@ export default {
 
   beforeRouteUpdate(to, from, next) {
     let roomCode = to.params.id;
+    logUser(`Went to room ${roomCode}`);
+
     this.getFeatures(roomCode);
     next();
   },

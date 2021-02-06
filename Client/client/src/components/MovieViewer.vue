@@ -16,6 +16,8 @@ import 'video.js/dist/video-js.css'
 
 import { videoPlayer } from 'vue-video-player'
 import { storage } from "../main";
+import { logUser } from '../utils/helper';
+
 import Question from './Question';
 export default{
     name:'movieViewer',
@@ -55,11 +57,13 @@ export default{
     methods:{   
       
      async getMovie(movieName,questionDetails){
+      
       this.selectedMovie = await storage.ref(`/videos/${movieName}.mp4`).getDownloadURL();
       this.playerOptions.sources[0].src=this.selectedMovie;
       this.question = questionDetails.question;
       this.category = questionDetails.category;
-
+      logUser(`clicked on question ${questionDetails.question}`);
+      logUser(`watching movie ${movieName}`);
      }
     },
     beforeDestroy(){
