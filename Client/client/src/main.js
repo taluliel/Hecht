@@ -24,6 +24,8 @@ import ship from  './components/ship';
 import Crafts from  './components/Crafts';
 import religion from  './components/religion';
 import israeliHome from  './components/israeliHome';
+import Entrance from  './components/Entrance';
+import ThematicDisplays from  './components/ThematicDisplays';
 import FlagIcon from 'vue-flag-icon';
 import i18n from './i18n'
 
@@ -57,6 +59,8 @@ question:{},...route.params
 {path:'/Crafts',name:'Crafts',component:Crafts},
 {path:'/religion',name:'religion',component:religion},
 {path:'/israeliHome',name:'israeliHome',component:israeliHome},
+{path:'/Entrance',name:'Entrance',component:Entrance},
+{path:'/ThematicDisplays',name:'ThematicDisplays',component:ThematicDisplays},
 ];
 const router = new VueRouter({
   routes, // short for `routes: routes`

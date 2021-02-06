@@ -21,7 +21,24 @@
               </v-btn>
             </div>
           </v-list-item>
+       <v-list-item class="menuLine">
+            <a href="/map">
+              <v-img
+                class="feature"
+                contain
+                src="../assets/inputColor.png"
+                max-width="28px"
+                margin-right="35px"
+              />
+            </a>
+            <v-list-item-title>
+              <button class="title" onclick="window.location.href='/map'">
+                {{ $t("feature") }}
+              </button>
+            </v-list-item-title>
+          </v-list-item>
 
+        <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
             <a href="/map">
               <v-img

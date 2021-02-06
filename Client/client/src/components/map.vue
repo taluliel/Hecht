@@ -11,7 +11,7 @@
     </div>
     <div class="canvas-wrapper">
       <img class="imgMap" src="../assets/firstfloor.png" />
-      <button class="Auditorium" onclick="window.location.href='/map'">
+      <button class="Auditorium">
         {{ $t("Auditorium") }}
       </button>
       <button class="ship" onclick="window.location.href='/ship'">
@@ -23,8 +23,8 @@
       <button class="Crafts" onclick="window.location.href='/Crafts'">
         {{ $t("Crafts") }}
       </button>
-         <button class="revolt" onclick="window.location.href='/map'">
-        {{ $t("revolt") }}
+         <button class="ExchangingExhibition" >
+        {{ $t("ExchangingExhibition") }}
       </button>
          <button class="israelihome" onclick="window.location.href='/israeliHome'">
         {{ $t("home") }}
@@ -32,16 +32,37 @@
          <button class="religion" onclick="window.location.href='/religion'">
         {{ $t("religion") }}
       </button>
-          <button class="Entrance" onclick="window.location.href='/map'">
+          <button class="Entrance" onclick="window.location.href='/Entrance'">
         {{ $t("Entrance") }}
       </button>
     </div>
+  <!-- <v-carousel :show-arrows="false">
+    <v-carousel-item
+      v-for="(item,i) in items"
+      :key="i"
+       :to="`/secondFloor`" 
+      :src="item.src"
+    ></v-carousel-item>
+  </v-carousel> -->
   </div>
+  
 </template>
 
 <script>
 export default {
   name: "map",
+  //  data () {
+  //     return {
+  //       items: [
+  //         {
+  //           src: "/map",
+  //         },
+  //         {
+  //           src: "/secondFloor",
+  //         },
+  //           ],
+  //     }
+  //   },
 };
 </script>
 
@@ -108,7 +129,7 @@ border-style: groove;
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+  color: #6c757d;
 }
 .ship {
   position: absolute;
@@ -146,7 +167,7 @@ border-style: groove;
   letter-spacing: 0.2px;
   color: #0f2a48;
 }
-.revolt{
+.ExchangingExhibition{
     position: absolute;
   width: 53px;
  left: calc(55% - 53px/2 + 95px);
@@ -156,7 +177,7 @@ border-style: groove;
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+  color: #6c757d;
 }
 .israelihome{
     position: absolute;

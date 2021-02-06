@@ -1,12 +1,12 @@
 <template>
-  <div class="religion">
+  <div class="Entrance">
     <div class="Poi">
       <p class="PoiTitle">
-        {{ $t("religion") }}
+        {{ $t("Entrance") }}
       </p>
     </div>
     <div class="POI">
-      <img class="imgMap" src="../assets/religion.png" />
+      <img class="imgMap" src="../assets/Entrance.png" />
     </div>
     <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
@@ -18,7 +18,7 @@
       <v-card class="popUp">
         <v-card-actions>
           <v-card-text class="cardText">
-            {{ $t("Gods") }}
+            {{ $t("Museum entrance") }}
           </v-card-text>
           <v-btn icon v-on:click="dialog.value = false">
             <v-icon> mdi-close-circle-outline </v-icon>
@@ -27,44 +27,25 @@
       </v-card>
          </template>
     </v-dialog>
-
-    <v-dialog v-model="dialog" width="260" height="44">
-      <template v-slot:activator="{ on, attrs }">
-        <button v-on="on" v-bind="attrs">
-          <img class="location2" src="../assets/CurrentLocationMarker.png" />
-        </button>
-      </template>
-   <template v-slot:default="dialog">
-      <v-card class="popUp">
-        <v-card-actions>
-          <v-card-text class="cardText">
-            {{ $t("Jerusalem photo") }}
-          </v-card-text>
-          <v-btn icon v-on:click="dialog.value = false">
-            <v-icon> mdi-close-circle-outline </v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-       </template>
-    </v-dialog>
   </div>
 </template>
 
 <script>
 export default {
-  name: "religion",
+  name: "Entrance",
 };
 </script>
 
 <style scoped>
-.religion {
+.Entrance {
   background: #cccbc2;
 }
 .PoiTitle {
   text-align: center;
-   margin-top: 14px;
+  margin-top: 14px;
+
   color: #0f2a48;
-     border-bottom-style: groove;
+      border-bottom-style: groove;
     border-color: #ffffff;
 }
 .Poi {
@@ -92,13 +73,8 @@ export default {
 }
 .location1 {
   position: fixed;
-  right: 72%;
-  top: 72%;
-}
-.location2 {
-  position: fixed;
-  right: 66%;
-  top: 50%;
+ right: 48%;
+    top: 87%;
 }
 
 .cardText {

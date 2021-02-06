@@ -1,12 +1,12 @@
 <template>
-  <div class="Phoenicians">
+  <div class="ThematicDisplays">
     <div class="Poi">
       <p class="PoiTitle">
-        {{ $t("Phoenicians") }}
+        {{ $t("Thematic Displays") }}
       </p>
     </div>
-    <div class="canvas-wrapper">
-      <img class="imgMap" src="../assets/Phoenicians.png" />
+    <div class="POI">
+      <img class="imgMap" src="../assets/ThematicDisplays.png" />
     </div>
     <!-- 1 -->
     <v-dialog v-model="dialog" width="260" height="44">
@@ -19,7 +19,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Burial practices") }}
+              {{ $t("Coins") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -39,7 +39,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Imported pottery") }}
+              {{ $t("Lions/ Female figurines") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -59,7 +59,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Maritime commerce") }}
+              {{ $t("Weights") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -79,7 +79,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Phoenician harbor") }}
+              {{ $t("Seven species") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -99,7 +99,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Phoenician writing") }}
+              {{ $t("Jerusalem") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -119,7 +119,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Vessels for daily use") }}
+              {{ $t("Seals") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -139,7 +139,7 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("Phoenician gods") }}
+              {{ $t("Temple Mount") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -159,7 +159,47 @@
         <v-card class="popUp">
           <v-card-actions>
             <v-card-text class="cardText">
-              {{ $t("The Phoenicians") }}
+              {{ $t("Cyprus") }}
+            </v-card-text>
+            <v-btn icon v-on:click="dialog.value = false">
+              <v-icon> mdi-close-circle-outline </v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
+    <!-- 9 -->
+    <v-dialog v-model="dialog" width="260" height="44">
+      <template v-slot:activator="{ on, attrs }">
+        <button v-on="on" v-bind="attrs">
+          <img class="location9" src="../assets/CurrentLocationMarker.png" />
+        </button>
+      </template>
+      <template v-slot:default="dialog">
+        <v-card class="popUp">
+          <v-card-actions>
+            <v-card-text class="cardText">
+              {{ $t("Egypt/ Greece") }}
+            </v-card-text>
+            <v-btn icon v-on:click="dialog.value = false">
+              <v-icon> mdi-close-circle-outline </v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
+    <!-- 10 -->
+    <v-dialog v-model="dialog" width="260" height="44">
+      <template v-slot:activator="{ on, attrs }">
+        <button v-on="on" v-bind="attrs">
+          <img class="location10" src="../assets/CurrentLocationMarker.png" />
+        </button>
+      </template>
+      <template v-slot:default="dialog">
+        <v-card class="popUp">
+          <v-card-actions>
+            <v-card-text class="cardText">
+              {{ $t("Oil lamps") }}
             </v-card-text>
             <v-btn icon v-on:click="dialog.value = false">
               <v-icon> mdi-close-circle-outline </v-icon>
@@ -173,12 +213,12 @@
 
 <script>
 export default {
-  name: "Phoenicians",
+  name: "ThematicDisplays",
 };
 </script>
 
 <style scoped>
-.Phoenicians {
+.ThematicDisplays {
   background: #cccbc2;
 }
 .PoiTitle {
@@ -186,8 +226,8 @@ export default {
   margin-top: 14px;
 
   color: #0f2a48;
-     border-bottom-style: groove;
-    border-color: #ffffff;
+  border-bottom-style: groove;
+  border-color: #ffffff;
 }
 .Poi {
   position: absolute;
@@ -199,12 +239,12 @@ export default {
   background: #cccbc2;
 }
 .imgMap {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  margin-right: 26px;
+  margin-left: 10px;
 }
 
-.canvas-wrapper {
+.POI {
   background: #cccbc2;
   position: absolute;
   width: 100%;
@@ -240,75 +280,56 @@ export default {
   flex-grow: 0;
   margin: 0px 8px;
 }
-
-.cardText {
-  position: static;
-  width: 200px;
-  height: 22px;
-  left: calc(50% - 200px / 2 + 20px);
-  top: 10px;
-
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  /* identical to box height, or 137% */
-
-  display: flex;
-  align-items: center;
-  text-align: right;
-
-  /* color/blue_dark */
-
-  color: #0f2a48;
-
-  /* Inside Auto Layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 0px 8px;
-}
 .location1 {
   position: fixed;
-  right: 75%;
-  top: 47%;
+  right: 44%;
+  top: 56%;
 }
 .location2 {
   position: fixed;
-  right: 73%;
-  top: 71%;
+  right: 18%;
+  top: 61%;
 }
 .location3 {
   position: fixed;
-  right: 65%;
-  top: 58%;
+  right: 51%;
+  top: 64%;
 }
 .location4 {
   position: fixed;
-  right: 53%;
-  top: 64%;
+  right: 78%;
+  top: 66%;
 }
 
 .location5 {
   position: fixed;
-  right: 43%;
-  top: 55%;
+  right: 33%;
+  top: 70%;
 }
 
 .location6 {
   position: fixed;
-  right: 34%;
-  top: 48%;
+  right: 11%;
+  top: 74%;
 }
 .location7 {
   position: fixed;
-  right: 27%;
-  top: 64%;
+  right: 51%;
+  top: 76%;
 }
 .location8 {
   position: fixed;
-  right: 27%;
-  top: 74%;
+  right: 25%;
+  top: 83%;
+}
+.location9 {
+  position: fixed;
+  right: 40%;
+  top: 86%;
+}
+.location10 {
+  position: fixed;
+  right: 65%;
+  top: 84%;
 }
 </style>
