@@ -47,6 +47,7 @@ export const storage = firebase.storage();
 
 const routes = [
     {path:'/',name:'home',component:home},
+    {path:'/home',name:'home1',component:home},
   {path:'/room/:id',name:'room',component:Room},
 {path:'/feature/:id',name:'feature',component:QuestionViewer},
 {path:'/movie/:id',name:'movie',component:MovieViewer,props:(route)=>({

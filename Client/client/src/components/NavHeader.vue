@@ -22,7 +22,7 @@
             </div>
           </v-list-item>
        <v-list-item class="menuLine">
-            <a href="/map">
+          <a v-on:click="goToRoute('map')">
               <v-img
                 class="feature"
                 contain
@@ -32,7 +32,7 @@
               />
             </a>
             <v-list-item-title>
-              <button class="title" onclick="window.location.href='/map'">
+              <button class="title" v-on:click="goToRoute('map')">
                 {{ $t("feature") }}
               </button>
             </v-list-item-title>
@@ -40,7 +40,7 @@
 
         <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
-            <a href="/map">
+           <a v-on:click="goToRoute('map')">
               <v-img
                 class="map"
                 contain
@@ -50,7 +50,7 @@
               />
             </a>
             <v-list-item-title>
-              <button class="title" onclick="window.location.href='/map'">
+              <button class="title" v-on:click="goToRoute('map')">
                 {{ $t("map") }}
               </button>
             </v-list-item-title>
@@ -95,7 +95,7 @@
               max-width="50px"
          />
 
-            <a href="/?home">
+            <a v-on:click="goToRoute('')">
               <v-img
                 alt="Hecht Logo"
                 contain
@@ -125,7 +125,7 @@
         />
       </div>
       <div class="hecht">
-        <a href="/?home">
+        <a v-on:click="goToRoute('')">
           <v-img
             alt="Hecht Logo"
             contain
@@ -170,6 +170,11 @@ export default {
       this.$i18n.locale = lang;
       this.$vuetify.rtl = lang == "he" || lang == "ar";
       EventBus.$emit("locale_changed", lang);
+    },
+    goToRoute: function (route) {
+      this.$router.push(`/${route}`).catch((err) => {
+        err;
+      });
     },
     back() {
       this.$router.back();
