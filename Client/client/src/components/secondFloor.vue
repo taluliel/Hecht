@@ -17,17 +17,17 @@
         {{ $t("office") }}
       </button>
 
-      <button class="ThematicViews" onclick="window.location.href='/map'">
-        {{ $t("ThematicViews") }}
+      <button class="ThematicDisplays" onclick="window.location.href='/ThematicDisplays'">
+        {{ $t("Thematic Displays") }}
       </button>
-      <button class="ExchangingExhibition" onclick="window.location.href='/map'">
+      <button class="ExchangingExhibition" >
         {{ $t("ExchangingExhibition") }}
       </button>
-         <button class="ArtDepartment" onclick="window.location.href='/map'">
+         <button class="ArtDepartment">
         {{ $t("ArtDepartment") }}
       </button>
-          <button class="ExchangingExhibition2" onclick="window.location.href='/map'">
-        {{ $t("ExchangingExhibition2") }}
+          <button class="ThematicViews" >
+        {{ $t("ThematicViews") }}
       </button>
        
     </div>
@@ -106,7 +106,7 @@ left: calc(50% - 46px/2 - 43.5px);
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+  color: #6c757d;
 }
 .office {
   position: absolute;
@@ -118,7 +118,7 @@ left: calc(50% - 12px/2 + 146.5px);
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+  color: #6c757d;
 }
 
 .ExchangingExhibition {
@@ -131,9 +131,9 @@ left: calc(50% - 58px/2 + 122.5px);
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+  color: #6c757d;
 }
-.ThematicViews {
+.ThematicDisplays {
   position: absolute;
   width: 85px;
 left: calc(50% - 85px/2 + 79px);
@@ -155,10 +155,10 @@ left: calc(50% - 84px/2 + 0px);
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+    color: #6c757d;
 }
 
-.ExchangingExhibition2{
+.ThematicViews{
     position: absolute;
     width: 89px;
     left: calc(50% - 67px/2 - 110px);
@@ -168,7 +168,7 @@ left: calc(50% - 84px/2 + 0px);
   font-size: 11px;
   text-align: center;
   letter-spacing: 0.2px;
-  color: #0f2a48;
+    color: #6c757d;
 }
 
 </style>

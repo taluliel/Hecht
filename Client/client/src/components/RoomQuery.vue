@@ -64,8 +64,6 @@ export default {
 }
 .goToRoom {
   background: #f4f4f1;
-  box-shadow: 0px 0px 2px rgba(32, 36, 71, 0.12),
-    0px 2px 2px rgba(32, 36, 71, 0.15);
   position: fixed;
   top: 65px;
   left: 48px;
