@@ -64,9 +64,9 @@ export default {
 }
 .goToRoom {
   background: #f4f4f1;
-  position: fixed;
-  top: 65px;
-  left: 48px;
+  position: absolute;
+  top: 6%;
+  right: 105%;
   color: #5c3f55;
   mix-blend-mode: normal;
 }

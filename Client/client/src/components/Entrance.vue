@@ -8,7 +8,9 @@
     <div class="POI">
       <img class="imgMap" src="../assets/Entrance.png" />
     </div>
-    <v-dialog v-model="dialog" width="260" height="44">
+
+    <p class="location1">{{ $t("Museumentrance") }}</p>
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location1" src="../assets/CurrentLocationMarker.png" />
@@ -26,7 +28,7 @@
         </v-card-actions>
       </v-card>
          </template>
-    </v-dialog>
+    </v-dialog> -->
   </div>
 </template>
 
@@ -45,8 +47,8 @@ export default {
   margin-top: 14px;
 
   color: #0f2a48;
-      border-bottom-style: groove;
-    border-color: #ffffff;
+  border-bottom-style: groove;
+  border-color: #ffffff;
 }
 .Poi {
   position: absolute;
@@ -72,9 +74,12 @@ export default {
   top: 9%;
 }
 .location1 {
-  position: fixed;
- right: 48%;
-    top: 87%;
+  position: absolute;
+  right: 54%;
+  top: 89%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 
 .cardText {

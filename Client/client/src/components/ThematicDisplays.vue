@@ -2,14 +2,44 @@
   <div class="ThematicDisplays">
     <div class="Poi">
       <p class="PoiTitle">
-        {{ $t("Thematic Displays") }}
+        {{ $t("ThematicDisplays") }}
       </p>
     </div>
     <div class="POI">
       <img class="imgMap" src="../assets/ThematicDisplays.png" />
     </div>
+    <p class="location1">
+      {{ $t("Coins") }}
+    </p>
+    <p class="location2">
+      {{ $t("Lions/Femalefigurines") }}
+    </p>
+    <p class="location3">
+      {{ $t("Weights") }}
+    </p>
+    <p class="location4">
+      {{ $t("Sevenspecies") }}
+    </p>
+    <p class="location5">
+      {{ $t("Jerusalem") }}
+    </p>
+    <p class="location6">
+      {{ $t("Seals") }}
+    </p>
+    <p class="location7">
+      {{ $t("TempleMount") }}
+    </p>
+    <p class="location8">
+      {{ $t("Cyprus") }}
+    </p>
+    <p class="location9">
+      {{ $t("Egypt/Greece") }}
+    </p>
+    <p class="location10">
+      {{ $t("Oillamps") }}
+    </p>
     <!-- 1 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location1" src="../assets/CurrentLocationMarker.png" />
@@ -27,9 +57,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 2 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location2" src="../assets/CurrentLocationMarker.png" />
@@ -47,9 +77,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 3 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location3" src="../assets/CurrentLocationMarker.png" />
@@ -67,9 +97,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 4 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location4" src="../assets/CurrentLocationMarker.png" />
@@ -87,9 +117,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 5 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location5" src="../assets/CurrentLocationMarker.png" />
@@ -107,9 +137,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 6 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location6" src="../assets/CurrentLocationMarker.png" />
@@ -127,9 +157,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 7 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location7" src="../assets/CurrentLocationMarker.png" />
@@ -147,9 +177,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 8 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location8" src="../assets/CurrentLocationMarker.png" />
@@ -167,9 +197,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 9 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location9" src="../assets/CurrentLocationMarker.png" />
@@ -187,9 +217,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 10 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location10" src="../assets/CurrentLocationMarker.png" />
@@ -207,7 +237,7 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
   </div>
 </template>
 
@@ -281,55 +311,91 @@ export default {
   margin: 0px 8px;
 }
 .location1 {
-  position: fixed;
-  right: 44%;
-  top: 56%;
+  position: absolute;
+  right: 52%;
+  top: 46%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location2 {
-  position: fixed;
-  right: 18%;
-  top: 61%;
+  position: absolute;
+  right: 11%;
+  top: 53%;
+  width: 80px;
+  text-align: center;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location3 {
-  position: fixed;
-  right: 51%;
-  top: 64%;
+  position: absolute;
+  right: 52%;
+  top: 54%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location4 {
-  position: fixed;
-  right: 78%;
-  top: 66%;
+  position: absolute;
+  right: 75%;
+  top: 52%;
+  width: 50px;
+  text-align: center;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 
 .location5 {
-  position: fixed;
+  position: absolute;
   right: 33%;
-  top: 70%;
+  top: 61%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 
 .location6 {
-  position: fixed;
-  right: 11%;
-  top: 74%;
+  position: absolute;
+  right: 13%;
+  top: 66%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location7 {
-  position: fixed;
-  right: 51%;
-  top: 76%;
+  position: absolute;
+  right: 53%;
+  top: 71%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location8 {
-  position: fixed;
-  right: 25%;
-  top: 83%;
+  position: absolute;
+  right: 22%;
+  top: 81%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location9 {
-  position: fixed;
-  right: 40%;
-  top: 86%;
+  position: absolute;
+  right: 42%;
+  top: 83%;
+  width: 46px;
+  text-align: center;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location10 {
-  position: fixed;
-  right: 65%;
-  top: 84%;
+  position: absolute;
+  right: 69%;
+  top: 81%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 </style>

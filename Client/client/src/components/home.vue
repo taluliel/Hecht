@@ -17,7 +17,7 @@
         {{ $t("Instructions") }}
       </p>
     </div>
-    <div class="allLang">
+    <div class="allLangHome">
       <button class="changelang" v-on:click="choose('he')">
         <img src="../assets/hebrow.png" />
       </button>
@@ -77,23 +77,6 @@ export default {
   background-size: 100% 77%;
   /* animation: anim1 ease-in-out 20s infinite; */
 }
-/* 
-@keyframes anim1 {
-  /* 0% {
-    background-image: url("../assets/EntranceReubenHecht.jpg");
-  }
-  25% {
-    background-image: url("../assets/ArtsCrafts.jpg");
-  }
-  50% {
-    background-image: url("../assets/ShipFront.jpg");
-  } */
-/* 75% {
-    background-image: url("../assets/homePage.png");
-  } */
-/* 100% {
-  } 
-} */
 .div-wrapper {
   position: relative;
   height: 300px;
@@ -175,13 +158,13 @@ export default {
   flex-grow: 0;
   margin: 16px 9px;
 }
-.allLang {
+.allLangHome {
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px;
-  position: fixed;
-  top: 88%;
+  position: absolute;
+  top: 85%;
   height: 49px;
   left: calc(50% - 163px / 2);
   background: #f4f4f1;

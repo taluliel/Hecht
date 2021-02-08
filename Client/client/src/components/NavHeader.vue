@@ -1,9 +1,7 @@
 <template>
   <div>
     <v-toolbar class="primaryNav">
-      <v-menu 
-      max-height="100%"
-      left>
+      <v-menu max-height="100%" left>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -21,8 +19,8 @@
               </v-btn>
             </div>
           </v-list-item>
-       <v-list-item class="menuLine">
-          <a v-on:click="goToRoute('map')">
+          <v-list-item class="menuLine">
+            <a v-on:click="goToRoute('map')">
               <v-img
                 class="feature"
                 contain
@@ -38,9 +36,9 @@
             </v-list-item-title>
           </v-list-item>
 
-        <v-divider class="divider"></v-divider>
+          <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
-           <a v-on:click="goToRoute('map')">
+            <a v-on:click="goToRoute('map')">
               <v-img
                 class="map"
                 contain
@@ -56,7 +54,7 @@
             </v-list-item-title>
           </v-list-item>
 
-        <v-divider class="divider"></v-divider>
+          <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
             <v-img
               contain
@@ -84,26 +82,26 @@
               </button>
             </v-list-item>
           </div>
-           <v-divider class="divider"></v-divider>
+          <v-divider class="divider"></v-divider>
           <v-list-item class="bottom">
             <div class="icons2">
-            <v-img
-            class="icons"
-              contain
-              position="absolute"
-                 src="../assets/HAIFA_UNI.png"
-              max-width="50px"
-         />
-
-            <a v-on:click="goToRoute('')">
               <v-img
-                alt="Hecht Logo"
+                class="icons"
                 contain
                 position="absolute"
-                src="../assets/logo.jpeg"
-              max-width="40px"
+                src="../assets/HAIFA_UNI.png"
+                max-width="50px"
               />
-            </a>
+
+              <a v-on:click="goToRoute('')">
+                <v-img
+                  alt="Hecht Logo"
+                  contain
+                  position="absolute"
+                  src="../assets/logo.jpeg"
+                  max-width="40px"
+                />
+              </a>
             </div>
           </v-list-item>
         </v-list>
@@ -114,7 +112,7 @@
           {{ $t("title") }}
         </v-toolbar-title>
       </div>
-    
+
       <div class="university">
         <v-img
           alt="university Logo"
@@ -144,7 +142,7 @@
       <div class="roomQuery-container">
         <RoomQuery></RoomQuery>
       </div>
-       <v-divider class="divider"></v-divider>
+      <v-divider class="divider"></v-divider>
     </div>
   </div>
 </template>
@@ -285,11 +283,11 @@ export default {
   background: #eeeee9;
 }
 .chevron-right {
-  position: fixed;
+  position: absolute;
   /* height: 134px; */
   /* width: 36px; */
-  right: 11px;
-  top: 68px;
+  right: 4%;
+  top: 11%;
 
   /* color/final/pink_light */
   color: #5c3f55;
@@ -300,8 +298,8 @@ export default {
   padding: 21px 18px 21px 0px;
   position: static;
   background: #f4f4f1;
-      padding-left: 28px;
-    padding-right: 19px;
+  padding-left: 28px;
+  padding-right: 19px;
 }
 .title {
   position: static;
@@ -309,8 +307,8 @@ export default {
   height: 22px;
   left: calc(50% - 200px / 2 + 4.5px);
   top: 21px;
-    margin-left: 15px;
-    margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   color: #0f2a48;
 }
 
@@ -341,6 +339,7 @@ export default {
   flex-grow: 0;
   margin: 0px 0px;
 }
+
 .changelang {
   position: static;
   width: 44px;
@@ -378,54 +377,53 @@ export default {
 
   box-shadow: 0px 3px 5px rgba(11, 14, 36, 0.15);
 }
-.bottom{
+.bottom {
   display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: flex-end;
-padding: 20px 0px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px 0px;
 
-position: static;
-width: 309px;
-height: 235px;
-left: calc(50% - 309px/2);
-top: 410px;
-   
-/* color/Beige_2 */
-
-background: #F4F4F1;
-border-radius: 0px 0px 0px 12px;
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 11;
-flex-grow: 1;
-margin: 0px 0px;
-}
-.icons{
-    margin-left: 25px;
-   margin-right: 25px;
-}
-.icons2{
-     position: fixed;
-    display: flex;
-    width: 190px;
-}
-.divider{
   position: static;
-width: 309px;
-height: 2px;
-left: calc(50% - 309px/2);
-top: 204px;
+  width: 309px;
+  height: 235px;
+  left: calc(50% - 309px / 2);
+  top: 410px;
 
+  /* color/Beige_2 */
 
-/* Inside Auto Layout */
+  background: #f4f4f1;
+  border-radius: 0px 0px 0px 12px;
 
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-margin: 0px 0px;
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 11;
+  flex-grow: 1;
+  margin: 0px 0px;
+}
+.icons {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.icons2 {
+  position: absolute;
+  display: flex;
+  width: 190px;
+}
+.divider {
+  position: static;
+  width: 309px;
+  height: 2px;
+  left: calc(50% - 309px / 2);
+  top: 204px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 6;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
 </style>

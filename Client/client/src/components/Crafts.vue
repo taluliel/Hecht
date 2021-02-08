@@ -8,8 +8,23 @@
     <div class="POI">
       <img class="imgMap" src="../assets/Crafts.png" />
     </div>
+    <p class="location1">
+      {{ $t("Woodworking") }}
+    </p>
+    <p class="location2">
+      {{ $t("Glassmaking") }}
+    </p>
+    <p class="location3">
+      {{ $t("Stonevessels") }}
+    </p>
+    <p class="location4">
+      {{ $t("Synagoguemosaic") }}
+    </p>
+    <p class="location5">
+      {{ $t("Metalworking") }}
+    </p>
     <!-- 1 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location1" src="../assets/CurrentLocationMarker.png" />
@@ -28,8 +43,8 @@
         </v-card>
       </template>
     </v-dialog>
-    <!-- 2 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <! 2 -->
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location2" src="../assets/CurrentLocationMarker.png" />
@@ -47,9 +62,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 3 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location3" src="../assets/CurrentLocationMarker.png" />
@@ -67,9 +82,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 4 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location4" src="../assets/CurrentLocationMarker.png" />
@@ -87,9 +102,9 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
     <!-- 5 -->
-    <v-dialog v-model="dialog" width="260" height="44">
+    <!-- <v-dialog v-model="dialog" width="260" height="44">
       <template v-slot:activator="{ on, attrs }">
         <button v-on="on" v-bind="attrs">
           <img class="location5" src="../assets/CurrentLocationMarker.png" />
@@ -107,7 +122,7 @@
           </v-card-actions>
         </v-card>
       </template>
-    </v-dialog>
+    </v-dialog> -->
   </div>
 </template>
 
@@ -123,11 +138,11 @@ export default {
 }
 .PoiTitle {
   text-align: center;
-   margin-top: 14px;
+  margin-top: 14px;
 
   color: #0f2a48;
-     border-bottom-style: groove;
-    border-color: #ffffff;
+  border-bottom-style: groove;
+  border-color: #ffffff;
 }
 .Poi {
   position: absolute;
@@ -182,28 +197,46 @@ export default {
   margin: 0px 8px;
 }
 .location1 {
-  position: fixed;
-  right: 58%;
-  top: 49%;
+  position: absolute;
+  right: 53%;
+  top: 40%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location2 {
-  position: fixed;
-  right: 70%;
-  top: 77%;
+  position: absolute;
+  right: 61%;
+  top: 79%;
+  width: 68px;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location3 {
-  position: fixed;
-  right: 20%;
-  top: 77%;
+  position: absolute;
+  right: 21%;
+  top: 78%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location4 {
-  position: fixed;
-  right: 42%;
-  top: 85%;
+  position: absolute;
+  right: 48%;
+  top: 83%;
+  width: 59px;
+  text-align: center;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 .location5 {
-  position: fixed;
-  right: 29%;
-  top: 90%;
+  position: absolute;
+  right: 23%;
+  top: 89%;
+  font-style: normal;
+  font-size: 12px;
+  color: #0f2a48;
 }
 </style>
