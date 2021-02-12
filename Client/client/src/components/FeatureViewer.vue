@@ -22,7 +22,6 @@
 </template>
 <script>
 import { storage } from "../main";
-import { logUser } from '../utils/helper';
 
 export default {
   name: "featureViewer",
@@ -32,8 +31,9 @@ export default {
   },
   methods: {
     goToQuestionCategories(featureID) {
-      logUser(`In feature ${featureID}`);
+      //(`In feature ${featureID}`);
       this.$router.push(`/feature/${featureID}`).catch((err) => {
+       
         err;
       });
     },
@@ -45,6 +45,7 @@ export default {
   },
   updated() {
     if (this.imageDetails.name) {
+       //logUser(`In feature ${featureID}`);
       this.getImageUrl(this.imageDetails.name);
     }
     

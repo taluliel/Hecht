@@ -44,7 +44,7 @@ export default {
   },
   mounted() {
     let vm1 = this;
-  logUser("Checking the questions");
+    logUser(`Entering feature ${vm1.featureID} &  Checking the questions`);
     EventBus.$on("locale_changed", function (lang) {
       console.log(lang);
       vm1.fetchQuestions(vm1.featureID);
@@ -60,6 +60,7 @@ export default {
       });
     },
     fetchQuestions(featureID) {
+    
       this.featureID = featureID;
       this.questions.length = 0;
       db.collection("questions")
@@ -75,6 +76,7 @@ export default {
             });
           });
         });
+       
     },
   },
 };

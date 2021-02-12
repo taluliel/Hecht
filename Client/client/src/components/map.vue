@@ -49,8 +49,12 @@
 </template>
 
 <script>
+import {logUser} from '../utils/helper';
 export default {
   name: "map",
+  mounted(){
+    logUser("checking the map")
+  },
   methods: {
     goToRoute: function (route) {
       this.$router.push(`/${route}`).catch((err) => {
