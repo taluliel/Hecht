@@ -2,9 +2,9 @@
   <div class="map">
     <div class="canvas-wrapper">
       <div class="floor1">
-        <a href="/secondFloor">
+      <button v-on:click="goToRoute('secondFloor')">
           <v-img class="floors_1" src="../assets/floors_1.png" />
-        </a>
+      </button>
 
         <p class="floorTitl1">
           {{ $t("floor1") }}

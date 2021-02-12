@@ -11,10 +11,10 @@
         v-on:click="goToQuestionCategories(item.featureid)"
         class="flex-rectangle"
         :style="{
-          top: item.coords.y + 'px',
-          left: item.coords.x + 'px',
-          height: item.coords.height ? `${item.coords.height}px`:'100px',
-          width: item.coords.width ? `${item.coords.width}px`:'100px'
+          top: item.coords.y + '%',
+          left: item.coords.x + '%',
+          height: item.coords.height ? `${item.coords.height}%`:'100%',
+          width: item.coords.width ? `${item.coords.width}%`:'100%'
         }"
       />
     </v-img>
@@ -70,8 +70,9 @@ export default {
   mask-position: center; */
 }
  .flex-rectangle {
-
-  border: 3px solid rgb(233, 143, 41);
+/* background-image: url("../assets/highlightEXHIBIT.png"); */
+   border: 3px solid rgb(233, 143, 41); 
+  /* background-size: 100% 100%; */
   position:absolute;
 } 
 

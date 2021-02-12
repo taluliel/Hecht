@@ -231,6 +231,10 @@ export default {
   flex-grow: 0;
   margin: 0px 0px;
 }
+.NavBtn{
+      height: 36px;
+    width: 66px;
+}
 .menuTitle {
   position: static;
   width: 235px;
@@ -258,7 +262,7 @@ export default {
   margin: 8px 0px;
 }
 .Hechttitle {
-  width: 245px;
+  width: 252px;
   height: 29px;
   top: 10px;
   left: calc(57% - 199px / 2 - 5.32px);
