@@ -1,6 +1,8 @@
 <template>
   <div class="roomQuery">
+     <form>
     <div class="goToRoom">
+     
       <button v-on:click="goToRoom">
         <img src="../assets/return.png" />
       </button>
@@ -13,7 +15,9 @@
       item-text="roomCode"
       item-value="roomCode"
     />
+     </form>
   </div>
+ 
 </template>
 
 <script>
@@ -37,9 +41,9 @@ export default {
   mounted() {},
   methods: {
     goToRoom: function () {
-      console.log(this.select);
+      
       this.$router.push(`/room/${this.select}`).catch((err) => {
-        err;
+       console.log(err);
       });
     },
   },

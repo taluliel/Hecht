@@ -5,6 +5,7 @@
       :src="image1"
       class="featureImage"
     >
+    <div  v-if="imageDetails">
       <div
         v-for="(item, index) in imageDetails.features"
         :key="index"
@@ -17,6 +18,7 @@
           width: item.coords.width ? `${item.coords.width}px`:'100px'
         }"
       />
+    </div>
     </v-img>
   </div>
 </template>

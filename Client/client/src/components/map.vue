@@ -5,12 +5,10 @@
         <a href="/secondFloor">
           <v-img class="floors_1" src="../assets/floors_1.png" />
         </a>
-
         <p class="floorTitl1">
           {{ $t("floor1") }}
         </p>
       </div>
-
       <img class="imgMap" src="../assets/firstfloor.png" />
       <button class="Auditorium">
         {{ $t("Auditorium") }}
