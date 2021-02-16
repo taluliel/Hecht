@@ -38,7 +38,7 @@ export default {
     flex-grow: 0;
     margin: 10px 14px;
     position: static;
-    width: 343px;
+    width: 94%;
     height: 80px;
     left: calc(50% - 343px/2);
     top: 0px;

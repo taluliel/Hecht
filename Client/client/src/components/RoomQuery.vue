@@ -5,7 +5,7 @@
         <img src="../assets/return.png" />
       </button>
     </div>
-    <input
+    <input type="number" 
       class="chooseRoom"
       v-model="select"
       :placeholder="choose_room"
@@ -51,7 +51,7 @@ export default {
   position: absolute;
   left: 105px;
   right: 63px;
-  height: 8%;
+  height: 56px;
   border-radius: 2px;
   margin-top: 8px;
   background: #e7e7df;

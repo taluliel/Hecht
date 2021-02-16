@@ -204,7 +204,7 @@ export default {
 .religion {
   position: absolute;
   width: 27px;
-  left: calc(51% - 92px / 2 - 131px);
+  left: 4%;
   top: 79%;
   font-style: normal;
   font-weight: 600;
@@ -216,8 +216,8 @@ export default {
 .Entrance {
   position: absolute;
   width: 26px;
-  left: calc(51% - 86px / 2 - 134.5px);
-  top: 98%;
+  left: 5%;
+  top: 97%;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;

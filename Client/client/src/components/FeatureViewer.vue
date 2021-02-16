@@ -1,10 +1,6 @@
 <template>
   <div class="canvas-wrapper">
-    <v-img
-      contain
-      :src="image1"
-      class="featureImage"
-    >
+    <v-img contain :src="image1" class="featureImage">
       <div
         v-for="(item, index) in imageDetails.features"
         :key="index"
@@ -13,10 +9,16 @@
         :style="{
           top: item.coords.y + '%',
           left: item.coords.x + '%',
-          height: item.coords.height ? `${item.coords.height}%`:'100%',
-          width: item.coords.width ? `${item.coords.width}%`:'100%'
+          height: item.coords.height ? `${item.coords.height}%` : '100%',
+          width: item.coords.width ? `${item.coords.width}%` : '100%',
         }"
-      />
+      >
+        <div
+          class="insisde-rectangle"
+          v-on:click="goToQuestionCategories(item.featureid)"
+          :style="{ top: '0%', left: '0%', height: '100%', width: '100%' }"
+        />
+      </div>
     </v-img>
   </div>
 </template>
@@ -31,9 +33,7 @@ export default {
   },
   methods: {
     goToQuestionCategories(featureID) {
-      //(`In feature ${featureID}`);
-      this.$router.push(`/feature/${featureID}`).catch((err) => {
-       
+        this.$router.push(`/feature/${featureID}`).catch((err) => {
         err;
       });
     },
@@ -45,10 +45,8 @@ export default {
   },
   updated() {
     if (this.imageDetails.name) {
-       //logUser(`In feature ${featureID}`);
       this.getImageUrl(this.imageDetails.name);
     }
-    
   },
   computed: {
     getImage: function () {
@@ -62,28 +60,36 @@ export default {
 </script>
 <style scoped>
 .featureImage {
-
-  clip-path: url(#clip); 
-/*    
+  clip-path: url(#clip);
+  /*    
   mask-image: url("../assets/rectangle.svg?inline");
   mask-size:100vmin;
   mask-repeat: no-repeat;
   mask-position: center; */
 }
- .flex-rectangle {
-/* background-image: url("../assets/highlightEXHIBIT.png"); */
-   border: 3px solid rgb(233, 143, 41); 
-  /* background-size: 100% 100%; */
-  position:absolute;
-} 
-
+.flex-rectangle {
+   position: absolute;
+  /* border: 3px solid hsl(32, 94%, 45%); */
+  border: 3px solid hsl(32, 94%, 45%);
+  border-radius: 22px;
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 12px;
+  
+}
+.insisde-rectangle {
+  /* border: 10px solid #d8d8d5; */
+  /* border: 10px solid  hsl(32, 71%, 58%); */
+  border: 10px solid  hsl(32, 73%, 51%);
+  border-width: thick;
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 12px;
+   border-radius: 9px;
+}
 .featureImage {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   max-width: 100%;
   height: auto;
-  /* position: absolute;
-  clip: rect(30px, 170px, 170px, 30px); */
 }
 </style>

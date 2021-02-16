@@ -19,7 +19,7 @@
               </v-btn>
             </div>
           </v-list-item>
-          <v-list-item class="menuLine">
+          <!-- <v-list-item class="menuLine">
             <a v-on:click="goToRoute('map')">
               <v-img
                 class="feature"
@@ -34,7 +34,7 @@
                 {{ $t("feature") }}
               </button>
             </v-list-item-title>
-          </v-list-item>
+          </v-list-item> -->
 
           <v-divider class="divider"></v-divider>
           <v-list-item class="menuLine">
@@ -231,9 +231,9 @@ export default {
   flex-grow: 0;
   margin: 0px 0px;
 }
-.NavBtn{
-      height: 36px;
-    width: 66px;
+.NavBtn {
+  height: 36px;
+  width: 66px;
 }
 .menuTitle {
   position: static;
@@ -288,12 +288,8 @@ export default {
 }
 .chevron-right {
   position: absolute;
-  /* height: 134px; */
-  /* width: 36px; */
-  right: 4%;
-  top: 11%;
-
-  /* color/final/pink_light */
+  right: 3%;
+  margin-top: 15px;
   color: #5c3f55;
   mix-blend-mode: normal;
 }

@@ -84,7 +84,7 @@ export default {
 .feature {
   width: 100%;
   /* left: 0px; */
-  height: 100%;
+  /* height: 100%; */
   /* top: 173px; */
   position: absolute;
 }
