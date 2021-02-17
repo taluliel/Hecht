@@ -232,7 +232,7 @@ export default {
 .PoiTitle {
   text-align: center;
   margin-top: 14px;
-
+    height: 25%;
   color: #0f2a48;
   border-bottom-style: groove;
   border-color: #ffffff;
@@ -291,7 +291,9 @@ export default {
 .location1 {
   position: absolute;
   left: 50%;
-  top: 63%;
+  top: 64%;
+  width: 125px;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -300,24 +302,27 @@ export default {
   position: absolute;
   right: 13%;
   top: 69%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location3 {
-  position: absolute;
-  right: 34%;
-  width: 73px;
-  top: 69%;
-  font-style: normal;
-  font-size: 12px;
-  color: #0f2a48;
+    position: absolute;
+    right: 33%;
+    width: 78px;
+    top: 70%;
+    font-style: normal;
+    font-size: 12px;
+    color: #0f2a48;
+    line-height: 96%;
 }
 .location4 {
   position: absolute;
   right: 77%;
   top: 68%;
   width: 46px;
+  line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -329,6 +334,7 @@ export default {
   right: 10%;
   top: 73%;
   width: 58px;
+  line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -340,6 +346,7 @@ export default {
   right: 62%;
   top: 74%;
   width: 67px;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -348,6 +355,7 @@ export default {
   position: absolute;
   right: 16%;
   top: 81%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -357,15 +365,17 @@ export default {
   right: 49%;
   top: 81%;
   width: 80px;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location9 {
   position: absolute;
-  right: 70%;
-  top: 84%;
-  width: 95px;
+     right: 75%;
+    top: 84%;
+    width: 68px;
+       line-height: 96%;
   text-align: center;
   font-style: normal;
   font-size: 12px;

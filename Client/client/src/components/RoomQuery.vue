@@ -1,23 +1,22 @@
 <template>
   <div class="roomQuery">
-     <form>
-    <div class="goToRoom">
-     
-      <button v-on:click="goToRoom">
-        <img src="../assets/return.png" />
-      </button>
-    </div>
-    <input type="number" 
-      class="chooseRoom"
-      v-model="select"
-      :placeholder="choose_room"
-      :items="items"
-      item-text="roomCode"
-      item-value="roomCode"
-    />
-     </form>
+          <!-- <v-btn  v-on:click="goToRoom"
+        >
+          <img src="../assets/return.png" />
+        </v-btn> -->
+        <img class="goToRoom" src="../assets/return.png" @click="goToRoom" />
+      <form>
+      <input
+        type="number"
+        class="chooseRoom"
+        v-model="select"
+        :placeholder="choose_room"
+        :items="items"
+        item-text="roomCode"
+        item-value="roomCode"
+      />
+    </form>
   </div>
- 
 </template>
 
 <script>
@@ -41,9 +40,8 @@ export default {
   mounted() {},
   methods: {
     goToRoom: function () {
-      
       this.$router.push(`/room/${this.select}`).catch((err) => {
-       console.log(err);
+        console.log(err);
       });
     },
   },
@@ -67,19 +65,18 @@ export default {
   background-repeat: no-repeat;
 }
 .goToRoom {
-  background: #f4f4f1;
-  position: absolute;
-  top: 6%;
-  right: 105%;
-  color: #5c3f55;
-  mix-blend-mode: normal;
+    position: absolute;
+    margin-top: 3px;
+    margin-right: 8px;
+    margin-left: 8px;
+    right: 105%;
 }
 .chooseRoom {
   position: absolute;
   right: 22px;
   top: 6px;
   bottom: 8px;
-
+  outline: none;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -93,6 +90,11 @@ export default {
   /* color/blue_dark_50% */
 
   color: #7f8c98;
+}
+.go {
+  outline: none;
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
 

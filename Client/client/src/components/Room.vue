@@ -1,21 +1,28 @@
 <template>
   <div class="room">
-     <v-dialog
+     <v-dialog class="error"
       v-model="dialog"
       max-width="290"
-    >
-      <v-card>
+        >
+      <v-card style="height: 178px;">
         <v-card-title class="headline">
-         
-        </v-card-title>
-
-        <v-card-text>
+          </v-card-title>
+          <v-img class="search"
+              contain
+              src="../assets/search.png"
+              max-width="24px"
+              margin-right="24px"
+            />
+        <v-card-text class="roomNotFound">
               {{ $t("room_not_found") }}
         </v-card-text>
-
+      <v-card-text class="roomNotFound2">
+              {{ $t("room_not_found2") }}
+        </v-card-text>
         <v-card-actions>
           <v-btn
-            color="orange darken-1"
+          class="ok"
+            color="white"
             text
             @click="dialog = false"
           >
@@ -69,7 +76,6 @@ export default {
         }).catch((err)=>{
           console.log(err);
           this.dialog=true;
-          
         });
     },
   },
@@ -116,5 +122,79 @@ export default {
   /* height: 100%; */
   /* top: 173px; */
   position: absolute;
+}
+.error{
+      transform-origin: center center;
+    max-width: 290px;
+    position: absolute;
+    height: 178px;
+    /* left: 33px; */
+    /* right: 32px; */
+    top: 20%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 24px rgb(0 0 0 / 22%), 0px 24px 24px rgb(0 0 0 / 30%);
+    border-radius: 4px;
+}
+.roomNotFound{
+  position: absolute;
+width: 221px;
+height: 34%;
+right: 15%;
+
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: right;
+
+/* color/blue_dark */
+
+color: #0F2A48;
+}
+.roomNotFound2{
+  position: absolute;
+width: 253px;
+right: 14%;
+top: 44%;
+
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+/* or 129% */
+
+display: flex;
+align-items: center;
+text-align: right;
+text-transform: capitalize;
+
+/* color/blue_dark */
+
+color: #0F2A48;
+}
+.ok{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+padding: 5px 18px;
+
+position: absolute;
+width: 76px;
+height: 36px;
+left: 24px;
+bottom: 10px;
+
+/* color/orange */
+
+background: #FE8212;
+border-radius: 4px;
+}
+.search{
+  position: absolute;
+right: 24px;
+top: 33px;
+
 }
 </style>

@@ -2,15 +2,54 @@
   <div class="map">
     <div class="canvas-wrapper">
       <div class="floor1">
-      <button v-on:click="goToRoute('secondFloor')">
+        <!-- <button v-on:click="goToRoute('secondFloor')">
           <v-img class="floors_1" src="../assets/floors_1.png" />
+      </button> -->
+        <v-bottom-navigation background-color="#cccbc2" height="50px">
+          <v-btn
+            max-width="50%"
+            outlined
+            class="floorTitl1"
+            v-on:click="goToRoute('map')"
+          >
+            <span class="currentfloor">{{ $t("floor1") }}</span>
+          </v-btn>
 
-      </button>
-      
-        <p class="floorTitl1">
-          {{ $t("floor1") }}
-        </p>
+          <v-btn
+            max-width="50%"
+            class="floorTitl2"
+            outlined
+            v-on:click="goToRoute('secondFloor')"
+          >
+            <span>{{ $t("floor2") }}</span>
+          </v-btn>
+        </v-bottom-navigation>
       </div>
+
+      <!-- <v-tabs
+          v-model="tab"
+          centered
+          fixed-tabs
+          background-color="#cccbc2"
+            >
+          <v-tab style="margin-right: 0px">{{ $t("floor1") }}</v-tab>
+          <div class="v-tabs-slider orange"></div>
+          <v-divider vertical></v-divider>
+          <v-tab v-on:click="goToRoute('secondFloor')">{{
+            $t("floor2")
+          }}</v-tab>
+        </v-tabs> -->
+
+      <!-- <button class="floorTitl1">
+        {{ $t("floor1") }}
+      </button>
+      <button class="floorTitl2" v-on:click="goToRoute('secondFloor')">
+        {{ $t("floor2") }}
+      </button> -->
+      <!-- <p class="floorTitl1">
+          {{ $t("floor1") }}
+        </p> -->
+
       <img class="imgMap" src="../assets/firstfloor.png" />
       <button class="Auditorium">
         {{ $t("Auditorium") }}
@@ -37,23 +76,15 @@
         {{ $t("Entrance") }}
       </button>
     </div>
-    <!-- <v-carousel :show-arrows="false">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-       :to="`/secondFloor`" 
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel> -->
   </div>
 </template>
 
 <script>
-import {logUser} from '../utils/helper';
+import { logUser } from "../utils/helper";
 export default {
   name: "map",
-  mounted(){
-    logUser("checking the map")
+  mounted() {
+    logUser("checking the map");
   },
   methods: {
     goToRoute: function (route) {
@@ -62,18 +93,6 @@ export default {
       });
     },
   },
-  //  data () {
-  //     return {
-  //       items: [
-  //         {
-  //           src: "/map",
-  //         },
-  //         {
-  //           src: "/secondFloor",
-  //         },
-  //           ],
-  //     }
-  //   },
 };
 </script>
 
@@ -81,28 +100,34 @@ export default {
 .map {
   background: #cccbc2;
 }
+
 .floorTitl1 {
   position: absolute;
-  width: 108px;
-  height: 22px;
-  right: 66px;
-  top: 11px;
-
+  width: 100%;
   display: flex;
   align-items: center;
   text-align: right;
-
-  /* color/blue_dark */
-
   color: #0f2a48;
+  border-bottom-color: orange;
+  border-bottom-width: 2px;
+}
+.floorTitl2 {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+.currentfloor {
+  color: #0f2a48;
+  font-weight: bold;
 }
 .floor1 {
   position: absolute;
-  height: 49px;
+  /* height: 49px; */
   left: 0px;
   right: 0px;
-  /* color/Beige_4 */
-  border-style: groove;
+  border-bottom-style: groove;
   background: #cccbc2;
 }
 .imgMap {
@@ -156,7 +181,7 @@ export default {
 .Phoenicians {
   position: absolute;
   width: 86px;
-  left: calc(45% - 78px / 2 - 67.5px);
+  right: 60%;
   top: 50%;
   font-style: normal;
   font-weight: 600;
@@ -180,7 +205,7 @@ export default {
 .ExchangingExhibition {
   position: absolute;
   width: 53px;
-  left: calc(55% - 53px / 2 + 95px);
+  right: 11%;
   top: 52%;
   font-style: normal;
   font-weight: 600;
@@ -203,8 +228,8 @@ export default {
 }
 .religion {
   position: absolute;
-  width: 27px;
-  left: 4%;
+  width: 38px;
+  right: 87%;
   top: 79%;
   font-style: normal;
   font-weight: 600;

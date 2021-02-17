@@ -45,7 +45,7 @@ export default {
 .PoiTitle {
   text-align: center;
   margin-top: 14px;
-
+    height: 25%;
   color: #0f2a48;
   border-bottom-style: groove;
   border-color: #ffffff;

@@ -254,7 +254,7 @@ export default {
 .PoiTitle {
   text-align: center;
   margin-top: 14px;
-
+    height: 25%;
   color: #0f2a48;
   border-bottom-style: groove;
   border-color: #ffffff;
@@ -314,24 +314,27 @@ export default {
   position: absolute;
   right: 52%;
   top: 46%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location2 {
   position: absolute;
-  right: 11%;
-  top: 53%;
-  width: 80px;
+  right: 10%;
+  top: 50%;
+  width: 48px;
   text-align: center;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
+  line-height: 96%;
 }
 .location3 {
   position: absolute;
   right: 52%;
-  top: 54%;
+  top: 55%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -341,6 +344,7 @@ export default {
   right: 75%;
   top: 52%;
   width: 50px;
+  line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -349,8 +353,9 @@ export default {
 
 .location5 {
   position: absolute;
-  right: 33%;
-  top: 61%;
+  right: 31%;
+  top: 62%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -360,14 +365,16 @@ export default {
   position: absolute;
   right: 13%;
   top: 66%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location7 {
   position: absolute;
-  right: 53%;
-  top: 71%;
+  right: 44%;
+  top: 72%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -375,7 +382,8 @@ export default {
 .location8 {
   position: absolute;
   right: 22%;
-  top: 81%;
+  top: 82%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -385,6 +393,7 @@ export default {
   right: 42%;
   top: 83%;
   width: 46px;
+  line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -394,6 +403,7 @@ export default {
   position: absolute;
   right: 69%;
   top: 81%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;

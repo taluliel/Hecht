@@ -3,15 +3,25 @@
   <div class="secondFloor">
     <div class="canvas-wrapper">
       <div class="floor2">
-        <a href="/map">
-          <v-img class="floors_2" src="../assets/floors_2.png" />
-        </a>
-
-        <p class="floorTitl2">
-          {{ $t("floor2") }}
-        </p>
+        <v-bottom-navigation background-color="#cccbc2" height="50px">
+          <v-btn
+            max-width="50%"
+            outlined
+            class="floorTitl1"
+            v-on:click="goToRoute('map')"
+          >
+            <span>{{ $t("floor1") }}</span>
+          </v-btn>
+          <v-btn
+            max-width="50%"
+            class="floorTitl2"
+            outlined
+            v-on:click="goToRoute('secondFloor')"
+          >
+            <span class="currentfloor">{{ $t("floor2") }}</span>
+          </v-btn>
+        </v-bottom-navigation>
       </div>
-
       <img class="imgMap" src="../assets/secondfloor.png" />
       <button class="Auditorium">
         {{ $t("Auditorium") }}
@@ -36,14 +46,6 @@
         {{ $t("ThematicViews") }}
       </button>
     </div>
-    <!-- <v-carousel :show-arrows="false">
-    <v-carousel-item
-      v-for="(item,i) in items"
-      :key="i"
-       :to="`/secondFloor`" 
-      :src="item.src"
-    ></v-carousel-item>
-  </v-carousel> -->
   </div>
 </template>
 
@@ -57,18 +59,6 @@ export default {
       });
     },
   },
-  //  data () {
-  //     return {
-  //       items: [
-  //         {
-  //           src: "/map",
-  //         },
-  //         {
-  //           src: "/secondFloor",
-  //         },
-  //           ],
-  //     }
-  //   },
 };
 </script>
 
@@ -76,28 +66,33 @@ export default {
 .secondFloor {
   background: #cccbc2;
 }
-.floorTitl2 {
-  position: absolute;
-  width: 108px;
-  height: 22px;
-  right: 66px;
-  top: 11px;
 
+.floorTitl1 {
+  position: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
   text-align: right;
-
-  /* color/blue_dark */
-
+}
+.floorTitl2 {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  border-bottom-color: orange;
+  border-bottom-width: 2px;
+}
+.currentfloor {
   color: #0f2a48;
+  font-weight: bold;
 }
 .floor2 {
   position: absolute;
-  height: 49px;
+  /* height: 49px; */
   left: 0px;
   right: 0px;
-  /* color/Beige_4 */
-  border-style: groove;
+  border-bottom-style: groove;
   background: #cccbc2;
 }
 .imgMap {
@@ -128,7 +123,6 @@ export default {
 
 .Auditorium {
   position: absolute;
-  width: 46px;
   left: calc(50% - 46px / 2 - 43.5px);
   top: 22%;
   font-style: normal;
@@ -140,9 +134,9 @@ export default {
 }
 .office {
   position: absolute;
-  width: 26px;
-  left: calc(50% - 12px / 2 + 146.5px);
+  width: 35px;
   top: 30%;
+  right: 7%;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;
@@ -154,7 +148,7 @@ export default {
 .ExchangingExhibition {
   position: absolute;
   width: 58px;
-  left: calc(50% - 58px / 2 + 122.5px);
+  right: 14%;
   top: 50%;
   font-style: normal;
   font-weight: 600;
@@ -166,7 +160,8 @@ export default {
 .ThematicDisplays {
   position: absolute;
   width: 85px;
-  left: calc(53% - 85px / 2 + 79px);
+
+  right: 19%;
   top: 80%;
   font-style: normal;
   font-weight: 600;
@@ -191,8 +186,8 @@ export default {
 .ThematicViews {
   position: absolute;
   width: 89px;
-  left: calc(50% - 67px / 2 - 110px);
-  top: 71%;
+  left: 9%;
+  top: 69%;
   font-style: normal;
   font-weight: 600;
   font-size: 11px;

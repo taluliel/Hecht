@@ -108,7 +108,7 @@
       </v-menu>
 
       <div class="Hechttitle">
-        <v-toolbar-title>
+        <v-toolbar-title style="font-size: 18px;">
           {{ $t("title") }}
         </v-toolbar-title>
       </div>
@@ -246,17 +246,9 @@ export default {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height, or 137% */
-
-  align-items: center;
+   align-items: center;
   text-align: right;
-
-  /* color/blue_light */
-
   color: #466a85;
-
-  /* Inside Auto Layout */
-
   flex: none;
   flex-grow: 0;
   margin: 8px 0px;
@@ -266,17 +258,12 @@ export default {
   height: 29px;
   top: 10px;
   left: calc(57% - 199px / 2 - 5.32px);
-
+font-size: 18px;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 22px;
-  /* identical to box height, or 137% */
-
-  text-align: center;
-
-  /* color/final/pink_light */
-
+   text-align: center;
   color: #466a85;
 }
 .fram22 {

@@ -139,7 +139,7 @@ export default {
 .PoiTitle {
   text-align: center;
   margin-top: 14px;
-
+        height: 25%;
   color: #0f2a48;
   border-bottom-style: groove;
   border-color: #ffffff;
@@ -200,15 +200,17 @@ export default {
   position: absolute;
   right: 53%;
   top: 40%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location2 {
   position: absolute;
-  right: 61%;
-  top: 79%;
+  right: 59%;
+  top: 80%;
   width: 68px;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -217,15 +219,17 @@ export default {
   position: absolute;
   right: 21%;
   top: 78%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
 }
 .location4 {
   position: absolute;
-  right: 48%;
-  top: 83%;
+  right: 40%;
+  top: 85%;
   width: 59px;
+ line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -234,7 +238,8 @@ export default {
 .location5 {
   position: absolute;
   right: 23%;
-  top: 89%;
+  top: 93%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
