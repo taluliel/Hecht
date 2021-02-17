@@ -4,13 +4,13 @@
       <div class="floor1">
       <button v-on:click="goToRoute('secondFloor')">
           <v-img class="floors_1" src="../assets/floors_1.png" />
-      </button>
 
+      </button>
+      
         <p class="floorTitl1">
           {{ $t("floor1") }}
         </p>
       </div>
-
       <img class="imgMap" src="../assets/firstfloor.png" />
       <button class="Auditorium">
         {{ $t("Auditorium") }}

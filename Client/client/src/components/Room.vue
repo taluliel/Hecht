@@ -1,5 +1,29 @@
 <template>
   <div class="room">
+     <v-dialog
+      v-model="dialog"
+      max-width="290"
+    >
+      <v-card>
+        <v-card-title class="headline">
+         
+        </v-card-title>
+
+        <v-card-text>
+              {{ $t("room_not_found") }}
+        </v-card-text>
+
+        <v-card-actions>
+          <v-btn
+            color="orange darken-1"
+            text
+            @click="dialog = false"
+          >
+             {{ $t("ok") }}
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <div class="PoI">
       <span class="titlePOI" v-if="currentRoom">
         {{ currentRoom.title[this.$i18n.locale.toUpperCase()] }}
@@ -27,6 +51,7 @@ export default {
     items: [2000, 3000, 4000, 5000],
     currentRoomCode: null,
     currentRoom: null,
+    dialog:false
   }),
   mounted() {
     this.getFeatures(this.$route.params.id);
@@ -41,6 +66,10 @@ export default {
         .then((querySnapshot) => {
           const room = querySnapshot.docs[0].data();
           this.currentRoom = room;
+        }).catch((err)=>{
+          console.log(err);
+          this.dialog=true;
+          
         });
     },
   },

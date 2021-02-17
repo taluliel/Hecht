@@ -1,6 +1,7 @@
 {
   "title": "מדריך דיגיטלי",
   "museum_name": "ברוכים הבאים למוזיאון הכט",
+  "room_not_found":"חדר זה לא נמצא",
   "choose_room": "הכניסו מספר מוצג",
   "map": "מפה",
   "feature": "מוצגים",
@@ -16,6 +17,7 @@
   "home": "עם ישראל בארץ ישראל",
   "religion": "דת ופולחן",
   "Entrance": "כניסה",
+  "ok":"אישור",
   "office": "חנות ומשרד",
   "ArtDepartment": "אגף האמנות",
   "ExchangingExhibition": "תערוכה מתחלפת",

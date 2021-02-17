@@ -1,6 +1,7 @@
 {
   "title":"Digital Guide",
   "museum_name":"Welcome to the Hecht Museum",
+  "room_not_found":"This room was not found",
   "start_tour":"To start the tour, please enter an exhibit code in the box above.",
   "choose_room":"Insert exhibition number",
   "Visit Hecht Museum page": "Visit Hecht Museum page",
@@ -18,6 +19,7 @@
   "religion": "Religion and worship",
   "Entrance" :"Entrance",
   "office": "Office and shop",
+  "ok":"Ok",
   "ArtDepartment":"Art Department",
 "ExchangingExhibition": "Exchanging exhibition",
 "ThematicDisplays": "Thematic Displays",

@@ -1,6 +1,14 @@
 <template>
   <div class="canvas-wrapper">
+
     <v-img contain :src="image1" class="featureImage">
+
+    <v-img
+      contain
+      :src="image1"
+      class="featureImage"
+    >
+    <div  v-if="imageDetails">
       <div
         v-for="(item, index) in imageDetails.features"
         :key="index"
@@ -19,6 +27,9 @@
           :style="{ top: '0%', left: '0%', height: '100%', width: '100%' }"
         />
       </div>
+
+      />
+    </div>
     </v-img>
   </div>
 </template>
