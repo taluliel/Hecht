@@ -108,7 +108,7 @@
       </v-menu>
 
       <div class="Hechttitle">
-        <v-toolbar-title style="font-size: 18px;">
+        <v-toolbar-title style="font-size: 16px;">
           {{ $t("title") }}
         </v-toolbar-title>
       </div>

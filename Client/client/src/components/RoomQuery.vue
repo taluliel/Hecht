@@ -1,22 +1,23 @@
 <template>
   <div class="roomQuery">
-          <!-- <v-btn  v-on:click="goToRoom"
-        >
-          <img src="../assets/return.png" />
-        </v-btn> -->
-        <img class="goToRoom" src="../assets/return.png" @click="goToRoom" />
-      <form>
-      <input
-        type="number"
-        class="chooseRoom"
-        v-model="select"
-        :placeholder="choose_room"
-        :items="items"
-        item-text="roomCode"
-        item-value="roomCode"
-      />
-    </form>
+     <form>
+    <div class="goToRoom">
+     
+      <button class="searchitem" v-on:click="goToRoom">
+        <img src="../assets/return.png" />
+      </button>
+    </div>
+    <input type="number" 
+      class="chooseRoom"
+      v-model="select"
+      :placeholder="choose_room"
+      :items="items"
+      item-text="roomCode"
+      item-value="roomCode"
+    />
+     </form>
   </div>
+ 
 </template>
 
 <script>
@@ -40,8 +41,9 @@ export default {
   mounted() {},
   methods: {
     goToRoom: function () {
+      
       this.$router.push(`/room/${this.select}`).catch((err) => {
-        console.log(err);
+       console.log(err);
       });
     },
   },
@@ -54,7 +56,9 @@ export default {
   left: 105px;
   right: 63px;
   height: 56px;
+      width: 56%;
   border-radius: 2px;
+   outline: none;
   margin-top: 8px;
   background: #e7e7df;
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.12),
@@ -65,18 +69,21 @@ export default {
   background-repeat: no-repeat;
 }
 .goToRoom {
-    position: absolute;
-    margin-top: 3px;
-    margin-right: 8px;
-    margin-left: 8px;
-    right: 105%;
+  background: #f4f4f1;
+  position: absolute;
+  top: 6%;
+  right: 105%;
+  color: #5c3f55;
+  mix-blend-mode: normal;
+   outline: none;
 }
 .chooseRoom {
   position: absolute;
   right: 22px;
   top: 6px;
   bottom: 8px;
-  outline: none;
+    width: 85%;
+ outline: none;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -91,10 +98,8 @@ export default {
 
   color: #7f8c98;
 }
-.go {
+.searchitem{
   outline: none;
-  max-width: 100%;
-  max-height: 100%;
 }
 </style>
 

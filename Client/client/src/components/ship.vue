@@ -269,6 +269,7 @@ export default {
   position: absolute;
   right: 42%;
   top: 19%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -277,6 +278,7 @@ export default {
   position: absolute;
   right: 27%;
   top: 32%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -285,6 +287,7 @@ export default {
   position: absolute;
   right: 27%;
   top: 55%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -295,6 +298,7 @@ export default {
   right: 41%;
   top: 76%;
   width: 76px;
+  line-height: normal;
   text-align: center;
   font-style: normal;
   font-size: 12px;
@@ -305,6 +309,7 @@ export default {
   position: absolute;
   right: 58%;
   top: 70%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;

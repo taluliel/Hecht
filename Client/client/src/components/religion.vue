@@ -113,6 +113,7 @@ export default {
   position: absolute;
   right: 72%;
   top: 71%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
@@ -121,6 +122,7 @@ export default {
   position: absolute;
   right: 58%;
   top: 40%;
+  line-height: normal;
   font-style: normal;
   font-size: 12px;
   color: #0f2a48;
